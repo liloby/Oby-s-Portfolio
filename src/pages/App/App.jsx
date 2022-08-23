@@ -3,8 +3,8 @@ import { useState } from "react"
 import { Routes, Route } from 'react-router-dom'
 import AuthPage from "../AuthPage/AuthPage"
 import { getUser } from "../../utilities/users-service" 
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import HomePage from '../HomePage/HomePage';
+import AboutPage from '../AboutPage/AboutPage';
 import NavBar from '../../components/NavBar/NavBar';
 
 
@@ -14,16 +14,16 @@ export default function App() {
   return (
     <main className="App">
       { 
-        user ? 
-        <>
+        // user ? 
+        <div className="Main-Container-Wrapper">
         <NavBar user={user} setUser={setUser} />
         <Routes>
-          <Route path='/orders/new' element={<NewOrderPage />} />
-          <Route path='/orders' element={<OrderHistoryPage />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
         </Routes>
-        </>
-        :
-        <AuthPage setUser={setUser}/>
+        </div>
+        // :
+        // <AuthPage setUser={setUser}/>
       }
     </main>
   );
