@@ -191,7 +191,7 @@ a {
     transition: 1.2s;
   }
   nav:hover {
-    background: rgba(1, 0, 38, 0.9);
+    background: rgba(1, 0, 38, .95);
     left: 0;
     top: 0;
     border: none;
