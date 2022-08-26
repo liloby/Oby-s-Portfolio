@@ -19,14 +19,7 @@ export default function AboutPage() {
                 <span className="Indent">In the past, </span>
                 I graduated from UCLA majoring in Linguistics and
               Psychology where the learning environment is face-paced and
-              challenging. Most recently, I was an assistant manager in a
-              restaurant where it taught me not only customer satisfaction
-              skills but I also took on a role to become a leader to work with
-              my staff to upgrade the restaurant’s health code from a B to an A.
-              The experience shaped me to become an organized and detail
-              oriented person who can follow and carry out instructions. Being
-              in a managerial position also taught me how to adapt to a
-              fast-paced and a slow-paced environment. Moving forward, I wish to
+              challenging. Moving forward, I wish to
               apply the same commitment and skill set to continue to grow in a
               Software Development position and as an individual.
             </p>
