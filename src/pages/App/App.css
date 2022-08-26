@@ -173,7 +173,7 @@ a {
   grid-row-gap: 0px;
 }
 
-@media only screen and (max-width: 1100px), screen and (max-height: 880px) {
+@media only screen and (max-width: 1238px), screen and (max-height: 700px) {
   .About-Info-Wrapper {
     display: flex;
     flex-direction: column;
@@ -188,7 +188,7 @@ a {
     width: 3%;
     border-radius: 2rem;
     border: 3px solid white;
-    transition: 1s;
+    transition: 1.2s;
   }
   nav:hover {
     background: rgba(1, 0, 38, 0.9);
@@ -197,7 +197,7 @@ a {
     border: none;
     margin: 0 auto;
     height: 90vh;
-    width: 50vw;
+    width: 30vw;
     z-index: 2;
   }
   .App {
@@ -216,13 +216,13 @@ a {
 @media only screen and (max-width: 700px) {
   .App {
     padding: 0;
-    height: 100vh;
+    height: 95vh;
   }
   .Home-Info-Wrapper {
-    height: 100vh;
+    height: 95vh;
   }
   .Home-Info {
-    width: 90%;
+    width: 95%;
   }
   .ClickAbout {
     padding: 0px 2rem;
@@ -232,7 +232,7 @@ a {
   }
   nav:hover {
     width: 65vw;
-    height: 100vh;
+    height: 95vh;
   }
 }
 
