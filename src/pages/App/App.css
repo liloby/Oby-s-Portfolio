@@ -322,6 +322,50 @@ button:hover {
   opacity:50%;
 }
 
+.admin-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-btn a:hover {
+  color: rgb(255, 230, 0);
+}
+
+main {
+  width: 90%;
+}
+
+main h1 {
+  text-align: center;
+}
+
+.message-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  overflow: auto;
+}
+
+.message-info-wrapper {
+  background: rgba(200, 200, 200, .2);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  height: 100%;
+  line-height: 2rem;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.date {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  color: rgb(203, 203, 116);
+}
 
 @media only screen and (max-width: 1280px), screen and (max-height: 750px) {
   .About-Info-Wrapper {
@@ -370,6 +414,12 @@ button:hover {
     width: 60%;
     height: 65%;
   }
+  .message-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    overflow: auto;
+  }
 }
 
 @media only screen and (max-height: 700px) {
@@ -410,5 +460,11 @@ button:hover {
   .github, .linkedin, .email {
     height: 3rem;
     width: 3rem;
+  }
+  .message-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+    overflow: auto;
   }
 }

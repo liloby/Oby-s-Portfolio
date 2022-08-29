@@ -1,15 +1,41 @@
 import SignUpForm from "../../components/SignUpForm/SignUpForm"
 import LoginForm from "../../components/LoginForm/LoginForm"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import * as messageAPI from '../../utilities/message-api'
+import MessageCard from "../../components/MessageCard/MessageCard";
 
-export default function AuthPage({ setUser }) {
-    const [showSignUp, setShowSignUp] = useState(false)
+export default function AuthPage({ setUser, user }) {
+    const [messages, setMessages] = useState([])
+
+    useEffect(
+        function () {
+            async function getMessages() {
+
+                const allMessages = await messageAPI.getAll()
+                console.log(allMessages)
+                setMessages(allMessages)
+            }
+            if (user) {
+                getMessages()
+
+            }
+        },
+        [user]
+    )
+
+    console.log(messages, "STATE MESSAGES")
+
     return (
         <main>
-            <h1>AuthPage</h1>
-            <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
-            { showSignUp ?
-            <SignUpForm setUser={setUser}/>
+            <h1 className="white">Admin Page</h1>
+            { user ?
+                <div className="message-wrapper">
+                    {
+                messages.map((message, idx) => (
+                    <MessageCard message={message} key={message._id} idx={idx} />
+                ))
+                }
+                </div>
             :
             <LoginForm setUser={setUser}/>
         }

@@ -11,6 +11,11 @@ export default function NavBar({
   handleExperiencesPage,
   handleContactPage,
 }) {
+
+  function handleLogOut() {
+    userService.logOut();
+    setUser(null)
+  }
   return (
     <nav>
       <div className="Avatar-info-wrapper">
@@ -72,6 +77,7 @@ export default function NavBar({
             Experiences
           </Link>
         </div>
+        <div>
         <Link
           onClick={handleContactPage}
           className={
@@ -83,7 +89,15 @@ export default function NavBar({
         >
           Contact
         </Link>
-        <div></div>
+        </div>
+        { user ?
+        <div className="admin-btn">
+          <Link to="/admin">Admin</Link>
+          <Link onClick={handleLogOut} to="/">Log Out</Link>
+        </div>
+          :
+          ""
+          }
       </div>
     </nav>
   );

@@ -37,7 +37,6 @@ export default function App() {
   return (
     <main className="App">
       {
-        // user ?
         <div className="Main-Container-Wrapper">
           <NavBar
             user={user}
@@ -56,10 +55,9 @@ export default function App() {
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/experiences" element={<ExperiencesPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/admin" element={< AuthPage setUser={setUser} user={user} />} />
           </Routes>
         </div>
-        // :
-        // <AuthPage setUser={setUser}/>
       }
     </main>
   );
