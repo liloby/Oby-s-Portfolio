@@ -175,74 +175,6 @@ a {
   grid-row-gap: 0px;
 }
 
-@media only screen and (max-width: 1280px), screen and (max-height: 750px) {
-  .About-Info-Wrapper {
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-  }
-  nav {
-    position: fixed;
-    left: 1rem;
-    top: 1rem;
-    overflow: hidden;
-    height: 1.5%;
-    width: 3%;
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
-    border-right: none;
-    transition: 1s;
-  }
-  nav:hover {
-    background: rgba(1, 0, 38, .95);
-    left: 0;
-    top: 0;
-    border: none;
-    border-radius: 2rem;
-    margin: 0 auto;
-    height: 90vh;
-    width: 32vw;
-    z-index: 2;
-  }
-  .App {
-    padding: 2rem;
-    height: 90vh;
-  }
-  .ProfilePic-Wrapper {
-    height: 60vh;
-    align-items: center;
-  }
-  .ProfilePic {
-    width: 60vw;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .App {
-    padding: 0;
-    height: 95vh;
-  }
-  .Home-Info-Wrapper {
-    height: 95vh;
-  }
-  .Home-Info {
-    width: 95%;
-  }
-  .ClickAbout {
-    padding: 0px 2rem;
-  }
-  .About-Info-Wrapper {
-    margin: 0 auto;
-  }
-  nav:hover {
-    width: 65vw;
-    height: 95vh;
-  }
-  a {
-    padding: .3rem 4rem;
-  }
-}
-
 .ProfilePic-Wrapper {
   grid-area: 1 / 1 / 3 / 2; 
   display: flex;
@@ -305,17 +237,21 @@ a {
 .message form {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   line-height: 2rem;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.254);
   border-radius: 2rem;
+  width: 60%;
+  height: 60%;
 }
 
 .message {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 input, textarea {
@@ -339,4 +275,140 @@ button {
 
 button:hover {
   opacity: 70%;
+}
+
+.contact-icons {
+  display: flex;
+  height: 11vh;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(203, 206, 234, 0.158);
+  border-radius: 0 0 2rem 0;
+  width: 100%;
+}
+
+
+.github {
+  background: rgb(255, 255, 255) url(./github.svg);
+}
+
+.linkedin {
+  background: rgb(255, 255, 255) url(./linkedin.svg);
+}
+
+.email {
+  background: url(./email.svg);
+}
+
+.github, .linkedin{
+  background-size: cover;
+  border-radius: 1rem;
+  height: 5rem;
+  width: 5rem;
+}
+
+.email {
+  height: 5rem;
+  width: 5rem;
+  background-color: rgba(235, 199, 247, 0.513);
+  border-radius: 1rem;
+}
+
+.contact-icons a {
+  padding: .3rem;
+}
+
+.contact-icons a:hover {
+  opacity:50%;
+}
+
+
+@media only screen and (max-width: 1280px), screen and (max-height: 750px) {
+  .About-Info-Wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  nav {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    overflow: hidden;
+    height: 1.5%;
+    width: 3%;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: none;
+    transition: 1s;
+  }
+  nav:hover {
+    background: rgba(1, 0, 38, .95);
+    left: 0;
+    top: 0;
+    border: none;
+    border-radius: 2rem;
+    margin: 0 auto;
+    height: 90vh;
+    width: 32vw;
+    z-index: 2;
+  }
+  .App {
+    padding: 2rem;
+    height: 90vh;
+  }
+  .ProfilePic-Wrapper {
+    height: 60vh;
+    align-items: center;
+  }
+  .ProfilePic {
+    width: 60vw;
+  }
+  .contact-icons {
+    border-radius: 0 0 2rem 2rem;
+  }
+  .message form {
+    width: 60%;
+    height: 65%;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .github, .linkedin, .email {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .App {
+    padding: 0;
+    height: 95vh;
+  }
+  .Home-Info-Wrapper {
+    height: 95vh;
+  }
+  .Home-Info {
+    width: 95%;
+  }
+  .ClickAbout {
+    padding: 0px 2rem;
+  }
+  .About-Info-Wrapper {
+    margin: 0 auto;
+  }
+  nav:hover {
+    width: 65vw;
+    height: 95vh;
+  }
+  a {
+    padding: .3rem 4rem;
+  }
+  .message form {
+    width: 80%;
+    height: 65%;
+  }
+  .github, .linkedin, .email {
+    height: 3rem;
+    width: 3rem;
+  }
 }
