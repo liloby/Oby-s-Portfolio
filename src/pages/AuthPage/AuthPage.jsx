@@ -26,7 +26,7 @@ export default function AuthPage({ setUser, user }) {
     console.log(messages, "STATE MESSAGES")
 
     return (
-        <main>
+        <main className="second-main">
             <h1 className="white">Admin Page</h1>
             { user ?
                 <div className="message-wrapper">
