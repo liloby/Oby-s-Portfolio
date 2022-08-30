@@ -2,7 +2,9 @@ const Message = require('../../models/message')
 
 module.exports = {
     create,
-    index
+    index,
+    update,
+    delete: deleteMessage
 }
 
 async function create(req, res) {
@@ -14,4 +16,15 @@ async function create(req, res) {
 async function index(req, res) {
     const messages = await Message.find({})
     res.json(messages)
+}
+
+async function update(req, res) {
+    const readMessage = await Message.findOneAndUpdate(req.body, {read: true})
+    readMessage.save()
+    res.json(readMessage)
+}
+
+async function deleteMessage(req, res) {
+    const deletedMessage = await Message.findOneAndDelete(req.body)
+    res.json(deletedMessage)
 }

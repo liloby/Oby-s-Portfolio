@@ -13,7 +13,7 @@ export default function AuthPage({ setUser, user }) {
 
                 const allMessages = await messageAPI.getAll()
                 console.log(allMessages)
-                setMessages(allMessages)
+                setMessages(allMessages.sort((a, b) => (a.createdAt < b.createdAt) ? 1 : -1 ))
             }
             if (user) {
                 getMessages()

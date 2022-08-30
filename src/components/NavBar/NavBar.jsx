@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
+import * as messageAPI from '../../utilities/message-api'
+import { useState, useEffect } from 'react'
 
 export default function NavBar({
   user,
@@ -11,6 +13,25 @@ export default function NavBar({
   handleExperiencesPage,
   handleContactPage,
 }) {
+  const [messages, setMessages] = useState([])
+
+  useEffect(
+      function () {
+          async function getMessages() {
+
+              const allMessages = await messageAPI.getAll()
+              console.log(allMessages)
+              setMessages(allMessages.filter(a => a.read === false))
+          }
+          if (user) {
+              getMessages()
+
+          }
+      },
+      [user]
+  )
+
+  console.log(messages, "UNREAD MESSAGES")
 
   function handleLogOut() {
     userService.logOut();
@@ -92,6 +113,7 @@ export default function NavBar({
         </div>
         { user ?
         <div className="admin-btn">
+          <h3 className="new-messages">{messages.length}</h3>
           <Link to="/admin">Admin</Link>
           <Link onClick={handleLogOut} to="/">Log Out</Link>
         </div>

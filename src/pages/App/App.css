@@ -1,6 +1,7 @@
 html {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(./bubble.jpg);
   background-size: cover;
+  background-position: center;
   /* background: linear-gradient(220deg, rgba(28, 52, 31, 1), rgba(0, 0, 0, 1), rgba(28, 52, 31, 1)); */
   /* background-position: -15rem; */
   margin: 0 auto;
@@ -344,8 +345,11 @@ main h1 {
 .message-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
   padding: 2rem;
-  overflow: auto;
+  height: 70%;
+  overflow: hidden;
 }
 
 .message-info-wrapper {
@@ -355,10 +359,14 @@ main h1 {
   flex-direction: column;
   align-items: center;
   color: white;
-  height: 100%;
+  height: 11rem;
   line-height: 2rem;
-  padding: 1rem;
+  padding: .5rem 1rem 1.5rem 1rem;
   overflow: auto;
+}
+
+.message-info-wrapper::-webkit-scrollbar, .message-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .date {
@@ -367,6 +375,33 @@ main h1 {
   text-align: left;
   font-style: italic;
   color: rgb(203, 203, 116);
+}
+
+.delete-btn {
+  background: none;
+  box-shadow: none;
+  color: red;
+  margin: 0 auto;
+}
+
+.mark-read-btn {
+  background: none;
+  box-shadow: none;
+  margin: 0 auto;
+  opacity: 30%;
+}
+
+.one-line {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.new-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(219, 49, 49);
 }
 
 @media only screen and (max-width: 1280px), screen and (max-height: 750px) {
@@ -466,6 +501,7 @@ main h1 {
   .message-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
     padding: 2rem;
     overflow: auto;
   }
