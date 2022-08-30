@@ -10,6 +10,7 @@ const initState = {
 
 export default function ContactPage() {
     const [formData, setFormData] = useState(initState)
+    const [popup, setPopup] = useState(false)
 
 
    async function handleAddMessage(evt) {
@@ -18,17 +19,29 @@ export default function ContactPage() {
     const message = await messageAPI.newMessage(updatedMessage)
     console.log(message, "MESSAGE AFTER CONTROLLER")
     setFormData(initState)
+    setPopup(true)
    }
 
    function handleChange(evt) {
     setFormData({...formData, [evt.target.name]: evt.target.value})
    }
 
+   function handleDismiss() {
+    setPopup(false)
+   }
 
   return (
     <div className="Routes">
       <div className="message">
         <h1 className="white">Contact Me</h1>
+        {popup === true ? 
+        <div className="popup">
+          <h4>Thank you for your message! I'll get back to you within 48 hours!</h4>
+          <button onClick={handleDismiss}>Dismiss</button>
+        </div>
+        :
+        ""
+        }
         <form onSubmit={handleAddMessage}>
           <label className="white">Name:</label>
           <input onChange={handleChange} name="name" value={formData.name} type="text" required />

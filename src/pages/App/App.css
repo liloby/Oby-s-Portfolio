@@ -65,6 +65,10 @@ nav {
   border-radius: 50%;
 }
 
+.border {
+  border: 1px solid rgb(13, 255, 0);
+}
+
 .Routes-Wrapper {
   display: flex;
   flex-direction: column;
@@ -255,6 +259,39 @@ a {
   height: 100%;
 }
 
+.popup {
+  position: absolute;
+  top: 19%;
+  background: rgba(0, 0, 0, 0.954);;
+  border-radius: 2rem;
+  width: 45%;
+  height: 55%;
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade 2s linear forwards;
+  padding: 2rem;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%;
+    border-radius: 100%;
+  }
+}
+
+.popup h4 {
+  font-size: 2rem;
+}
+
+.popup button {
+  font-size: 1.2rem;
+  padding: .8rem;
+}
+
 input, textarea {
   border-radius: .7rem;
   padding: .25rem;
@@ -280,7 +317,7 @@ button:hover {
 
 .contact-icons {
   display: flex;
-  height: 11vh;
+  height: 8vh;
   align-items: center;
   justify-content: space-around;
   background: rgba(203, 206, 234, 0.158);
@@ -304,13 +341,13 @@ button:hover {
 .github, .linkedin{
   background-size: cover;
   border-radius: 1rem;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .email {
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   background-color: rgba(235, 199, 247, 0.513);
   border-radius: 1rem;
 }
@@ -341,10 +378,9 @@ main h1 {
   justify-content: center;
 }
 
-
 .message-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
   padding: 2rem;
@@ -404,19 +440,30 @@ main h1 {
   color: rgb(219, 49, 49);
 }
 
+.admin-text:visited {
+  color: rgb(255, 0, 212);
+}
+
+.logout-text:visited {
+  color: white;
+}
+
 @media only screen and (max-width: 1280px), screen and (max-height: 750px) {
   .About-Info-Wrapper {
     display: flex;
     flex-direction: column;
     overflow: auto;
   }
+  .About-Info-Wrapper::-webkit-scrollbar {
+    display: none;
+  }
   nav {
     position: fixed;
     left: 1rem;
     top: 1rem;
     overflow: hidden;
-    height: 1.5%;
-    width: 3%;
+    height: 2%;
+    width: 5%;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     border-right: none;
@@ -457,6 +504,35 @@ main h1 {
     padding: 2rem;
     overflow: auto;
   }
+  .popup {
+    top: 16.2%;
+    width: 60%;
+    height: 65%;
+    padding: 1rem;
+  }
+}
+
+.form-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 2rem;
+  background: rgba(255, 255, 255, 0.254);
+  border-radius: 2rem;
+  padding: 5rem 3rem;
 }
 
 @media only screen and (max-height: 700px) {
@@ -467,6 +543,10 @@ main h1 {
 }
 
 @media only screen and (max-width: 700px) {
+  nav {
+    height: 2.5%;
+    width: 8%;
+  }
   .App {
     padding: 1.5rem;
     height: 90vh;
@@ -504,5 +584,11 @@ main h1 {
     gap: 3rem;
     padding: 2rem;
     overflow: auto;
+  }
+  .popup {
+    top: 16.5%;
+    width: 80%;
+    height: 65%;
+    padding: 1rem;
   }
 }

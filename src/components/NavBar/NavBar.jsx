@@ -40,7 +40,7 @@ export default function NavBar({
   return (
     <nav>
       <div className="Avatar-info-wrapper">
-        <div className="Avatar"></div>
+        <div className={user ? "Avatar border" : "Avatar"}></div>
         <div className="white name">Oby Li</div>
         <div className="white role">Full Stack Developer</div>
       </div>
@@ -113,9 +113,13 @@ export default function NavBar({
         </div>
         { user ?
         <div className="admin-btn">
-          <h3 className="new-messages">{messages.length}</h3>
-          <Link to="/admin">Admin</Link>
-          <Link onClick={handleLogOut} to="/">Log Out</Link>
+          {messages.length < 2 ?
+          <h3 className="new-messages">{messages.length} New Message</h3>
+          :
+          <h3 className="new-messages">{messages.length} New Messages</h3>  
+        }
+          <Link className="admin-text" to="/admin">Admin</Link>
+          <Link className="logout-text" onClick={handleLogOut} to="/">Log Out</Link>
         </div>
           :
           ""
