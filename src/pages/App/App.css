@@ -249,6 +249,7 @@ a {
   background: rgba(255, 255, 255, 0.154);
   border-radius: 2rem;
   width: 60%;
+  max-width: 27rem;
   height: 60%;
   font-weight: bold;
   font-size: 1.3rem;
@@ -628,6 +629,12 @@ main h1 {
   }
 }
 
+@media only screen and (max-height: 1044px) {
+   .Experience-wrapper {
+    justify-content: flex-start;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   nav {
     height: 2.5%;
@@ -658,6 +665,7 @@ main h1 {
   }
   .message form {
     width: 80%;
+    max-width: 25rem;
     height: 65%;
   }
   .github, .linkedin, .email {
