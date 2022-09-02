@@ -214,6 +214,7 @@ a {
 .About-titles {
   font-size: 2rem;
   display:inline-block;
+  margin: 1rem;
 }
 
 .Skills-Wrapper p {
@@ -249,6 +250,8 @@ a {
   border-radius: 2rem;
   width: 60%;
   height: 60%;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .message {
@@ -300,7 +303,7 @@ input, textarea {
 }
 
 button {
-  margin: 1rem 4rem 0 4rem;
+  margin: 1rem 8rem 0 8rem;
   cursor: pointer;
   border-radius: .7rem;
   border: none;
@@ -309,6 +312,7 @@ button {
   font-weight: bold;
   color: white;
   padding: .3rem;
+  font-size: 1.2rem;
 }
 
 button:hover {
@@ -385,7 +389,7 @@ main h1 {
   gap: 1rem;
   padding: 2rem;
   height: 70%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .message-info-wrapper {
@@ -446,6 +450,16 @@ main h1 {
 
 .logout-text:visited {
   color: white;
+}
+
+.optional {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+.myMessages {
+  text-align: center;
+  color: yellow;
 }
 
 @media only screen and (max-width: 1280px), screen and (max-height: 750px) {
@@ -590,5 +604,13 @@ main h1 {
     width: 80%;
     height: 65%;
     padding: 1rem;
+  }
+  .ProfilePic {
+    margin-top: 1rem;
+    height: 20rem;
+    width: 18rem;
+  }
+  button {
+    margin: 1rem 4rem 0 4rem;
   }
 }

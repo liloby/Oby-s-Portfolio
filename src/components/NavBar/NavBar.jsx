@@ -113,7 +113,10 @@ export default function NavBar({
         </div>
         { user ?
         <div className="admin-btn">
-          {messages.length < 2 ?
+          {messages.length === 0 ?
+          ""
+          :
+          messages.length < 2 ?
           <h3 className="new-messages">{messages.length} New Message</h3>
           :
           <h3 className="new-messages">{messages.length} New Messages</h3>  

@@ -23,11 +23,13 @@ export default function AuthPage({ setUser, user }) {
         [user]
     )
 
+
     console.log(messages, "STATE MESSAGES")
 
     return (
         <main className="second-main">
             <h1 className="white">Admin Page</h1>
+            <h3 className="white myMessages">My Messages:</h3>
             { user ?
                 <div className="message-wrapper">
                     {

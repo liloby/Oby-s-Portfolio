@@ -47,7 +47,7 @@ export default function ContactPage() {
           <input onChange={handleChange} name="name" value={formData.name} type="text" required />
           <label className="white">Email:</label>
           <input onChange={handleChange} name="email" value={formData.email} type="email" required />
-          <label className="white">Phone (Optional):</label>
+          <label className="white">Phone <span className="optional">(Optional) </span>:</label>
           <input onChange={handleChange} name="phone" value={formData.phone} type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890"/>
           <label className="white">Message:</label>
           <textarea onChange={handleChange} name="message" value={formData.message} id="" cols="30" rows="10" required></textarea>
