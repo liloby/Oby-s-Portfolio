@@ -246,7 +246,7 @@ a {
   justify-content: space-evenly;
   line-height: 2rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.254);
+  background: rgba(255, 255, 255, 0.154);
   border-radius: 2rem;
   width: 60%;
   height: 60%;
@@ -462,6 +462,78 @@ main h1 {
   color: yellow;
 }
 
+.form-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 2rem;
+  background: rgba(255, 255, 255, 0.154);
+  border-radius: 2rem;
+  padding: 5rem 3rem;
+}
+
+.Experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.081);
+  border-radius: 2rem;
+  margin: 2rem;
+  overflow: auto;
+}
+
+.Experience-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.Yilan-wrapper, .Volunteer-wrapper, .OTN-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.5rem 3rem;
+}
+
+.Yilan-img {
+  background-image: url(./Yilan.jpg);
+}
+
+.Yilan-info, .Volunteer-info, .OTN-info {
+  width: 40%;
+  font-size: 1.2rem;
+}
+
+.Volunteer-img {
+  background: url(./Volunteer.jpg);
+}
+
+.OTN-img {
+  background: url(./OTN.jpg);
+}
+
+.Yilan-img, .Volunteer-img, .OTN-img {
+  background-size: cover;
+  background-position: center;
+  height: 15rem;
+  width: 22rem;
+  border-radius: 2rem;
+}
+
 @media only screen and (max-width: 1280px), screen and (max-height: 750px) {
   .About-Info-Wrapper {
     display: flex;
@@ -524,30 +596,30 @@ main h1 {
     height: 65%;
     padding: 1rem;
   }
+  .Experience-wrapper {
+    justify-content: flex-start;
+  }
+  .Yilan-wrapper, .Volunteer-wrapper, .OTN-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .Volunteer-wrapper {
+    flex-direction: column-reverse;
+  }
+  .Yilan-info, .Volunteer-info, .OTN-info {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  .Yilan-img, .Volunteer-img, .OTN-img {
+    background-size: cover;
+    background-position: center;
+    height: 25rem;
+    width: 80%;
+    border-radius: 2rem;
+  }
 }
 
-.form-container-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 90%;
-  justify-content: space-evenly;
-}
-
-.form-container {
-  display: flex;
-  align-items: center;
-  justify-content: center
-}
-
-.form-container form {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  line-height: 2rem;
-  background: rgba(255, 255, 255, 0.254);
-  border-radius: 2rem;
-  padding: 5rem 3rem;
-}
 
 @media only screen and (max-height: 700px) {
   .github, .linkedin, .email {
@@ -612,5 +684,23 @@ main h1 {
   }
   button {
     margin: 1rem 4rem 0 4rem;
+  }
+  .Yilan-info, .Volunteer-info, .OTN-info {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .Yilan-img, .Volunteer-img, .OTN-img {
+    background-size: cover;
+    background-position: center;
+    height: 15rem;
+    width: 100%;
+    border-radius: 2rem;
+  }
+  .Experience-wrapper {
+    padding: 0;
+    margin: 0;
+  }
+  .Yilan-wrapper, .Volunteer-wrapper, .OTN-wrapper {
+    padding: 1rem;
   }
 }
