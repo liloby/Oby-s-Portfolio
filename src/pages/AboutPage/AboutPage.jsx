@@ -16,12 +16,12 @@ export default function AboutPage() {
           <span className="About-titles">About Me</span>
           <div className="AboutMe-Wrapper">
             <p>
-                <span className="Indent">In the past, </span>
-                I graduated from UCLA majoring in Linguistics and
-              Psychology where the learning environment is face-paced and
-              challenging. Moving forward, I wish to
-              apply the same commitment and hard work to continue to grow in a
-              Software Development position and as an individual. I especially love designing and bringing web applications to live!
+              <span className="Indent">In the past, </span>I graduated from UCLA
+              majoring in Linguistics and Psychology where the learning
+              environment is face-paced and challenging. Moving forward, I wish
+              to apply the same commitment and hard work to continue to grow in
+              a Software Development position and as an individual. I especially
+              love designing and bringing web applications to live!
             </p>
           </div>
         </div>

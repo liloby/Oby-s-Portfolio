@@ -2,6 +2,7 @@ export default function ExperiencesPage() {
   return (
     <div className="Routes">
       <div className="Experience-wrapper">
+        <h1 className="white">Experiences</h1>
         <div className="Yilan-wrapper">
           <div className="Yilan-img"></div>
           <p className="Yilan-info white">
@@ -20,8 +21,11 @@ export default function ExperiencesPage() {
           <div className="Volunteer-img"></div>
         </div>
         <div className="OTN-wrapper">
-            <div className="OTN-img"></div>
-            <p className="OTN-info white">This is my Acapella group when I was at UCLA. This picture was taken after we performed at an event for HBV awareness.</p>
+          <div className="OTN-img"></div>
+          <p className="OTN-info white">
+            This is my Acapella group when I was at UCLA. This picture was taken
+            after we performed at an event to raise college students' awareness for HBV.
+          </p>
         </div>
       </div>
     </div>

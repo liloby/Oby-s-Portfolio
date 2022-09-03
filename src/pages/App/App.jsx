@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState} from "react";
 import { Routes, Route } from "react-router-dom";
 import AuthPage from "../AuthPage/AuthPage";
 import { getUser } from "../../utilities/users-service";
@@ -9,6 +9,7 @@ import PortfolioPage from "../PortfolioPage/PortfolioPage";
 import ExperiencesPage from "../ExperiencesPage/ExperiencesPage";
 import ContactPage from "../ContactPage/ContactPage";
 import NavBar from "../../components/NavBar/NavBar";
+import { useEffect } from "react";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
