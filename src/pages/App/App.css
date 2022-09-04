@@ -18,24 +18,24 @@
   grid-row-gap: 0px;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.105);
+  background: rgba(255, 255, 255, 0.115);
   display: flex;
   border-radius: 2rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
   color: white;
 }
 
 .lightModeApp {
   background: rgb(255, 255, 255);
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) , url(./light2.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) , url(./light2.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .lightModeMain {
   color: black;
-  background: rgba(255, 255, 255, 0.63);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(30px);
 }
 
 .lightModeNav {
@@ -115,6 +115,7 @@ nav {
 
 .lightHome {
   color: #a58100;
+  
 }
 
 .AboutHref {
@@ -159,7 +160,7 @@ a {
 }
 
 .currentPage {
-  background: rgba(200, 200, 200, .5);
+  background: rgba(255, 255, 255, 0.6);
   transition: 500ms;
 }
 
@@ -284,6 +285,14 @@ a {
   display: inline-block;
   margin: .5rem;
   background: rgba(200,200,200,.3);
+  padding: .8rem;
+  border-radius: 2rem;
+}
+
+.lightSkills p {
+  display: inline-block;
+  margin: .5rem;
+  background: rgba(255, 255, 255, 0.382);
   padding: .8rem;
   border-radius: 2rem;
 }

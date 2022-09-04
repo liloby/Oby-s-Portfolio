@@ -63,7 +63,7 @@ export default function App() {
           />
           <Routes>
             <Route path="/" element={<HomePage handleAboutPage={handleAboutPage} lightMode={lightMode} />} />
-            <Route path="/about" element={<AboutPage />} />
+            <Route path="/about" element={<AboutPage lightMode={lightMode} />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/experiences" element={<ExperiencesPage />} />
             <Route path="/contact" element={<ContactPage />} />

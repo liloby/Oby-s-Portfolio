@@ -1,6 +1,6 @@
 import { checkToken } from "../../utilities/users-service";
 
-export default function AboutPage() {
+export default function AboutPage({ lightMode }) {
   async function handleCheckToken() {
     const expDate = await checkToken();
     console.log(expDate);
@@ -28,7 +28,7 @@ export default function AboutPage() {
 
         <div className="Skills white">
           <span className="About-titles">Skills</span>
-          <div className="Skills-Wrapper">
+          <div className={ lightMode ? "lightSkills" : "Skills-Wrapper"}>
             <p>HTML</p>
             <p>CSS</p>
             <p>Javascript</p>
