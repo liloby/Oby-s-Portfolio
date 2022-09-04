@@ -29,7 +29,11 @@ export default function AuthPage({ setUser, user }) {
     return (
         <main className="second-main">
             <h1 className="white">Admin Page</h1>
+            {user ? 
             <h3 className="white myMessages">My Messages:</h3>
+            :
+            ""
+            }
             { user ?
                 <div className="message-wrapper">
                     {
