@@ -14,6 +14,7 @@ import { useEffect } from "react";
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [currentPage, setCurrentPage] = useState(1);
+  const [lightMode, setLightMode] = useState(false)
 
   function handleHomePage() {
     setCurrentPage(1);
@@ -35,10 +36,18 @@ export default function App() {
     setCurrentPage(5);
   }
 
+  function handleLightMode() {
+    if (!lightMode) {
+      setLightMode(true)
+    } else {
+      setLightMode(false)
+    }
+  }
+
   return (
-    <main className="App">
+    <main className={lightMode ? "lightModeApp App" : "App"}>
       {
-        <div className="Main-Container-Wrapper">
+        <div className={lightMode ? "lightModeMain Main-Container-Wrapper" : "Main-Container-Wrapper"}>
           <NavBar
             user={user}
             setUser={setUser}
@@ -49,9 +58,11 @@ export default function App() {
             handlePortfolioPage={handlePortfolioPage}
             handleExperiencesPage={handleExperiencesPage}
             handleContactPage={handleContactPage}
+            handleLightMode={handleLightMode}
+            lightMode={lightMode}
           />
           <Routes>
-            <Route path="/" element={<HomePage handleAboutPage={handleAboutPage} />} />
+            <Route path="/" element={<HomePage handleAboutPage={handleAboutPage} lightMode={lightMode} />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/experiences" element={<ExperiencesPage />} />

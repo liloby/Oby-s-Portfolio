@@ -1,15 +1,13 @@
-html {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(./bubble.jpg);
+.App {
+  height: 91vh;
+  padding: 3rem;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(./bubble.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)) , url(./light2.jpg);
   background-size: cover;
   background-position: center;
   /* background: linear-gradient(220deg, rgba(28, 52, 31, 1), rgba(0, 0, 0, 1), rgba(28, 52, 31, 1)); */
   /* background-position: -15rem; */
   margin: 0 auto;
-}
-
-.App {
-  height: 85vh;
-  padding: 4rem;
 }
 
 .Main-Container-Wrapper {
@@ -24,6 +22,40 @@ html {
   display: flex;
   border-radius: 2rem;
   backdrop-filter: blur(10px);
+  color: white;
+}
+
+.lightModeApp {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) , url(./light2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.lightModeMain {
+  color: black;
+  background: rgba(255, 255, 255, 0.63);
+  backdrop-filter: blur(5px);
+}
+
+.lightModeNav {
+  border-right: 0.3px solid rgba(0, 0, 0, 0.402);
+}
+
+.lightModeBorder {
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.502);
+    margin: 0 1rem;
+}
+
+.modeSwitch {
+  margin: 0 0 .5rem 0;
+  padding: .3rem .5rem;
+  border-radius: 100%;
+}
+
+.LightMode-wrapper {
+  display: flex;
+  width: 90%;
 }
 
 nav {
@@ -53,7 +85,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   line-height: 3rem;
 }
 
@@ -77,28 +109,44 @@ nav {
   justify-content: space-around;
 }
 
-.white {
-  color: white;
-}
-
 .HomeHref {
   color: #FFF4CD;
+}
+
+.lightHome {
+  color: #a58100;
 }
 
 .AboutHref {
   color: #F9D7D7;
 }
 
+.lightAbout {
+  color: #a54444;
+}
+
 .PortfolioHref {
   color: #D7FFF3;
+}
+
+.lightPortfolio {
+  color: #04aa78;
 }
 
 .ExperiencesHref {
   color: #E6DAFF;
 }
 
+.lightExperiences {
+  color: #6c4ab6;
+ }
+ 
 .ContactHref {
  color: #FF9595;
+}
+
+.lightContact {
+  color: #e55757;
 }
 
 a {
@@ -128,6 +176,10 @@ a {
   color: rgb(200, 200, 200);
 }
 
+.lightModeRole {
+  color: rgb(50, 50, 50);
+}
+
 .Home-Info-Wrapper {
   display: flex;
   flex-direction: column;
@@ -153,6 +205,10 @@ a {
   display: inline-block;
   font-style: italic;
   animation: pulse 5s infinite;
+}
+
+.lightClickAbout {
+  color: #672a2a;
 }
 
 .ClickAbout:hover {

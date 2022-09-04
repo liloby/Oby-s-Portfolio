@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
-import * as messageAPI from '../../utilities/message-api'
-import { useState, useEffect } from 'react'
+import * as messageAPI from "../../utilities/message-api";
+import { useState, useEffect } from "react";
 
 export default function NavBar({
   user,
@@ -12,46 +12,57 @@ export default function NavBar({
   handlePortfolioPage,
   handleExperiencesPage,
   handleContactPage,
+  handleLightMode,
+  lightMode,
 }) {
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState([]);
 
   useEffect(
-      function () {
-          async function getMessages() {
+    function () {
+      async function getMessages() {
+        const allMessages = await messageAPI.getAll();
+        console.log(allMessages);
+        setMessages(allMessages.filter((a) => a.read === false));
+      }
+      if (user) {
+        getMessages();
+      }
+    },
+    [user]
+  );
 
-              const allMessages = await messageAPI.getAll()
-              console.log(allMessages)
-              setMessages(allMessages.filter(a => a.read === false))
-          }
-          if (user) {
-              getMessages()
-
-          }
-      },
-      [user]
-  )
-
-  console.log(messages, "UNREAD MESSAGES")
+  console.log(messages, "UNREAD MESSAGES");
 
   function handleLogOut() {
     userService.logOut();
-    setUser(null)
+    setUser(null);
   }
   return (
-    <nav>
+    <nav className={lightMode ? "lightModeNav" : ""}>
       <div className="Avatar-info-wrapper">
+        <div className="LightMode-wrapper">
+          <button className="modeSwitch" onClick={handleLightMode}>
+            {lightMode ? "🌙 " : "🔅"}
+          </button>
+        </div>
         <div className={user ? "Avatar border" : "Avatar"}></div>
-        <div className="white name">Oby Li</div>
-        <div className="white role">Full Stack Developer</div>
+        <div className="name">Oby Li</div>
+        <div className={lightMode ? "lightModeRole role" : "role"}>
+          Full Stack Developer
+        </div>
       </div>
-      <div className="Border-line"></div>
+      <div className={lightMode ? "lightModeBorder" : "Border-line"}></div>
       <div className="Routes-Wrapper">
         <div>
           <Link
             onClick={handleHomePage}
             className={
-              currentPage === 1
+              currentPage === 1 && lightMode
+                ? "currentPage nav-tags HomeHref lightHome"
+                : currentPage === 1 && !lightMode
                 ? "currentPage nav-tags HomeHref"
+                : lightMode
+                ? "nav-tags HomeHref lightHome"
                 : "nav-tags HomeHref"
             }
             to="/"
@@ -63,8 +74,12 @@ export default function NavBar({
           <Link
             onClick={handleAboutPage}
             className={
-              currentPage === 2
+              currentPage === 2 && lightMode
+                ? "currentPage nav-tags AboutHref lightAbout"
+                : currentPage === 2 && !lightMode
                 ? "currentPage nav-tags AboutHref"
+                : lightMode
+                ? "nav-tags AboutHref lightAbout"
                 : "nav-tags AboutHref"
             }
             to="/about"
@@ -76,8 +91,12 @@ export default function NavBar({
           <Link
             onClick={handlePortfolioPage}
             className={
-              currentPage === 3
+              currentPage === 3 && lightMode
+                ? "currentPage nav-tags PortfolioHref lightPortfolio"
+                : currentPage === 3 && !lightMode
                 ? "currentPage nav-tags PortfolioHref"
+                : lightMode
+                ? "nav-tags PortfolioHref lightPortfolio"
                 : "nav-tags PortfolioHref"
             }
             to="/portfolio"
@@ -89,8 +108,12 @@ export default function NavBar({
           <Link
             onClick={handleExperiencesPage}
             className={
-              currentPage === 4
+              currentPage === 4 && lightMode
+                ? "currentPage nav-tags ExperiencesHref lightExperiences"
+                : currentPage === 4 && !lightMode
                 ? "currentPage nav-tags ExperiencesHref"
+                : lightMode
+                ? "nav-tags ExperiencesHref lightExperiences"
                 : "nav-tags ExperiencesHref"
             }
             to="/experiences"
@@ -99,34 +122,41 @@ export default function NavBar({
           </Link>
         </div>
         <div>
-        <Link
-          onClick={handleContactPage}
-          className={
-            currentPage === 5
-              ? "currentPage nav-tags ContactHref"
-              : "nav-tags ContactHref"
-          }
-          to="/contact"
-        >
-          Contact
-        </Link>
+          <Link
+            onClick={handleContactPage}
+            className={
+              currentPage === 5 && lightMode
+                ? "currentPage nav-tags ContactHref lightContact"
+                : currentPage === 5 && !lightMode
+                ? "currentPage nav-tags ContactHref"
+                : lightMode
+                ? "nav-tags ContactHref lightContact"
+                : "nav-tags ContactHref"
+            }
+            to="/contact"
+          >
+            Contact
+          </Link>
         </div>
-        { user ?
-        <div className="admin-btn">
-          {messages.length === 0 ?
+        {user ? (
+          <div className="admin-btn">
+            {messages.length === 0 ? (
+              ""
+            ) : messages.length < 2 ? (
+              <h3 className="new-messages">{messages.length} New Message</h3>
+            ) : (
+              <h3 className="new-messages">{messages.length} New Messages</h3>
+            )}
+            <Link className="admin-text" to="/admin">
+              Admin
+            </Link>
+            <Link className="logout-text" onClick={handleLogOut} to="/">
+              Log Out
+            </Link>
+          </div>
+        ) : (
           ""
-          :
-          messages.length < 2 ?
-          <h3 className="new-messages">{messages.length} New Message</h3>
-          :
-          <h3 className="new-messages">{messages.length} New Messages</h3>  
-        }
-          <Link className="admin-text" to="/admin">Admin</Link>
-          <Link className="logout-text" onClick={handleLogOut} to="/">Log Out</Link>
-        </div>
-          :
-          ""
-          }
+        )}
       </div>
     </nav>
   );
