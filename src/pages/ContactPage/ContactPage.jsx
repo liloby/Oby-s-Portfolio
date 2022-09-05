@@ -8,7 +8,7 @@ const initState = {
     message: ''
 }
 
-export default function ContactPage() {
+export default function ContactPage({lightMode}) {
     const [formData, setFormData] = useState(initState)
     const [popup, setPopup] = useState(false)
 
@@ -33,27 +33,27 @@ export default function ContactPage() {
   return (
     <div className="Routes">
       <div className="message">
-        <h1 className="white">Contact Me</h1>
+        <h1>Contact Me</h1>
         {popup === true ? 
-        <div className="popup">
+        <div className={lightMode ? "lightPopup popup" : "popup"}>
           <h4>Thank you for your message! I'll get back to you within 48 hours!</h4>
-          <button onClick={handleDismiss}>Dismiss</button>
+          <button className={lightMode ? "lightBtn" : "darkBtn"} onClick={handleDismiss}>Dismiss</button>
         </div>
         :
         ""
         }
-        <form onSubmit={handleAddMessage}>
+        <form className={lightMode ? "lightForm" : "darkForm"} onSubmit={handleAddMessage}>
           <label className="white">Name:</label>
           <input onChange={handleChange} name="name" value={formData.name} type="text" required />
           <label className="white">Email:</label>
           <input onChange={handleChange} name="email" value={formData.email} type="email" required />
-          <label className="white">Phone <span className="optional">(Optional) </span>:</label>
+          <label className="white">Phone <em>(Optional)</em> :</label>
           <input onChange={handleChange} name="phone" value={formData.phone} type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890"/>
           <label className="white">Message:</label>
           <textarea onChange={handleChange} name="message" value={formData.message} id="" cols="30" rows="10" required></textarea>
-          <button type="submit">Send</button>
+          <button className={lightMode ? "lightBtn" : "darkBtn"} type="submit">Send</button>
         </form>
-        <div className="contact-icons">
+        <div className={lightMode ? "lightContact-icons contact-icons" : "contact-icons"}>
           <a href="https://github.com/liloby" target="_blank">
             <div className="github"></div>
           </a>

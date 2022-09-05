@@ -21,8 +21,9 @@
   background: rgba(255, 255, 255, 0.115);
   display: flex;
   border-radius: 2rem;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(20px);
   color: white;
+  transition: 1s;
 }
 
 .lightModeApp {
@@ -35,7 +36,7 @@
 .lightModeMain {
   color: black;
   background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(20px);
 }
 
 .lightModeNav {
@@ -44,13 +45,17 @@
 
 .lightModeBorder {
   border-bottom: 0.3px solid rgba(0, 0, 0, 0.502);
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
 .modeSwitch {
   margin: 0 0 .5rem 0;
   padding: .3rem .5rem;
   border-radius: 100%;
+}
+
+.modeSwitchLight {
+  background: linear-gradient(100deg, rgba(100,100,100,.8), rgba(0,0,0,.8));
 }
 
 .LightMode-wrapper {
@@ -109,12 +114,16 @@ nav {
   justify-content: space-around;
 }
 
+.HomeHref, .AboutHref, .PortfolioHref, .ExperiencesHref, .ContactHref {
+  transition: 1s;
+}
+
 .HomeHref {
   color: #FFF4CD;
 }
 
 .lightHome {
-  color: #a58100;
+  color: #785e01;
   
 }
 
@@ -123,7 +132,7 @@ nav {
 }
 
 .lightAbout {
-  color: #a54444;
+  color: #6f2c2c;
 }
 
 .PortfolioHref {
@@ -131,7 +140,7 @@ nav {
 }
 
 .lightPortfolio {
-  color: #04aa78;
+  color: #017854;
 }
 
 .ExperiencesHref {
@@ -139,7 +148,7 @@ nav {
 }
 
 .lightExperiences {
-  color: #6c4ab6;
+  color: #321f5b;
  }
  
 .ContactHref {
@@ -147,7 +156,7 @@ nav {
 }
 
 .lightContact {
-  color: #e55757;
+  color: #a43333;
 }
 
 a {
@@ -175,6 +184,7 @@ a {
 .role {
   font-size: 1.2rem;
   color: rgb(200, 200, 200);
+  transition: 1s;
 }
 
 .lightModeRole {
@@ -206,6 +216,7 @@ a {
   display: inline-block;
   font-style: italic;
   animation: pulse 5s infinite;
+  transition: 1s;
 }
 
 .lightClickAbout {
@@ -318,13 +329,20 @@ a {
   justify-content: space-evenly;
   line-height: 2rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.154);
   border-radius: 2rem;
   width: 60%;
   max-width: 27rem;
   height: 60%;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+.darkForm {
+  background: rgba(255, 255, 255, 0.154);
+}
+
+.lightForm {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .message {
@@ -350,6 +368,12 @@ a {
   align-items: center;
   animation: fade 2s linear forwards;
   padding: 2rem;
+  transition: 1s;
+}
+
+.lightPopup {
+  color: black;
+  background: rgba(249, 221, 255, 0.954);;
 }
 
 @keyframes fade {
@@ -386,6 +410,11 @@ button {
   color: white;
   padding: .3rem;
   font-size: 1.2rem;
+  transition: 1s;
+}
+
+.lightBtn {
+  background: rgba(38, 136, 136, 0.5);
 }
 
 button:hover {
@@ -398,10 +427,14 @@ button:hover {
   align-items: center;
   justify-content: space-around;
   background: rgba(203, 206, 234, 0.158);
-  border-radius: 0 0 2rem 0;
+  border-radius: 2rem;
   width: 100%;
+  transition: 1s;
 }
 
+.lightContact-icons {
+  background: rgba(255, 255, 255, 0.6);
+}
 
 .github {
   background: rgb(255, 255, 255) url(./github.svg);
@@ -524,11 +557,6 @@ main h1 {
   color: white;
 }
 
-.optional {
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-}
-
 .myMessages {
   text-align: center;
   color: yellow;
@@ -567,6 +595,10 @@ main h1 {
   margin: 2rem;
   overflow: auto;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.lightExperience-wrapper {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.200), rgba(255, 255, 255, 0.500) );
 }
 
 .Experience-wrapper::-webkit-scrollbar {

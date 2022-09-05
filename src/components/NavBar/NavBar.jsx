@@ -41,7 +41,7 @@ export default function NavBar({
     <nav className={lightMode ? "lightModeNav" : ""}>
       <div className="Avatar-info-wrapper">
         <div className="LightMode-wrapper">
-          <button className="modeSwitch" onClick={handleLightMode}>
+          <button className={lightMode? "modeSwitch modeSwitchLight" : "modeSwitch"} onClick={handleLightMode}>
             {lightMode ? "🌙 " : "🔅"}
           </button>
         </div>

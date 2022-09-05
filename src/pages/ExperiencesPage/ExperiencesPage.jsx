@@ -1,7 +1,7 @@
-export default function ExperiencesPage() {
+export default function ExperiencesPage({ lightMode }) {
   return (
     <div className="Routes">
-      <div className="Experience-wrapper">
+      <div className={lightMode ? "Experience-wrapper lightExperience-wrapper" : "Experience-wrapper"}>
         <h1 className="white">Experiences</h1>
         <div className="Yilan-wrapper">
           <div className="Yilan-img"></div>
