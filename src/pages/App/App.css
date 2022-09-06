@@ -34,7 +34,7 @@
 }
 
 .lightModeMain {
-  color: black;
+  color: rgb(55, 55, 55);
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(20px);
 }
@@ -349,7 +349,7 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
 }
 
@@ -432,7 +432,8 @@ button:hover {
   justify-content: space-around;
   background: rgba(203, 206, 234, 0.158);
   border-radius: 2rem;
-  width: 100%;
+  width: 50%;
+  max-width: 32rem;
   transition: 1s;
 }
 
@@ -687,7 +688,8 @@ main h1 {
     width: 60vw;
   }
   .contact-icons {
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 2rem;
+    width: 50%;
   }
   .message form {
     width: 60%;
@@ -823,5 +825,8 @@ main h1 {
   }
   .Yilan-wrapper, .Volunteer-wrapper, .OTN-wrapper {
     padding: 1rem;
+  }
+  .contact-icons {
+    width: 100%;
   }
 }
