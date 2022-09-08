@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import * as messageAPI from '../../utilities/message-api'
 import MessageCard from "../../components/MessageCard/MessageCard";
 
-export default function AuthPage({ setUser, user }) {
+export default function AuthPage({ setUser, user, lightMode }) {
     const [messages, setMessages] = useState([])
 
     useEffect(
@@ -38,7 +38,7 @@ export default function AuthPage({ setUser, user }) {
                 <div className="message-wrapper">
                     {
                 messages.map((message, idx) => (
-                    <MessageCard message={message} key={message._id} idx={idx} />
+                    <MessageCard message={message} key={message._id} idx={idx} lightMode={lightMode} />
                 ))
                 }
                 </div>

@@ -67,7 +67,7 @@ export default function App() {
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/experiences" element={<ExperiencesPage lightMode={lightMode} />} />
             <Route path="/contact" element={<ContactPage lightMode={lightMode}  />} />
-            <Route path="/admin" element={< AuthPage setUser={setUser} user={user} />} />
+            <Route path="/admin" element={< AuthPage setUser={setUser} user={user} lightMode={lightMode} />} />
           </Routes>
         </div>
       }

@@ -309,7 +309,7 @@ a {
 .lightSkills p {
   display: inline-block;
   margin: .5rem;
-  background: rgba(255, 255, 255, 0.382);
+  background: rgba(255, 255, 255, 0.682);
   padding: .8rem;
   border-radius: 2rem;
 }
@@ -521,6 +521,10 @@ main h1 {
   overflow: auto;
 }
 
+.light-message-wrapper {
+  background: rgb(255, 255, 255, .9);
+}
+
 .message-info-wrapper::-webkit-scrollbar, .message-wrapper::-webkit-scrollbar {
   display: none;
 }
@@ -648,6 +652,85 @@ main h1 {
   border-radius: 2rem;
 }
 
+.timeSup-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 3rem 6rem 6rem 6rem;
+  padding: 0 2rem 2rem 2rem;
+  border-radius: 2rem;
+  overflow: auto;
+}
+
+.timeSup-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.slide-container {
+  width: 650px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.image-container {
+  width: 2100px;
+  height: 450px;
+  position: relative;
+  transition: left 2s;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  left: 0px;
+}
+
+.slider-image {
+  float: left;
+  margin-right: 50px;
+  padding: 0px;
+  border-radius: .5rem;
+  opacity: 20%;
+  transform: scale(.8);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.12);
+  transition: 2s;
+}
+
+.selected-image {
+  opacity: 100%;
+  transform: scale(1);
+}
+
+.button-container {
+  top: -20px;
+  position: relative;
+}
+
+.slider-button {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  padding: 0px;
+  margin: 5px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: 50%;
+}
+
+#slider-image-1:target ~ .image-container {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-container {
+  left: -700px;
+}
+
+#slider-image-3:target ~ .image-container {
+  left: -1400px;
+}
+
+.selected {
+  opacity: 100%;
+}
+
 @media only screen and (max-width: 1280px), screen and (max-height: 650px) {
   .About-Info-Wrapper {
     display: flex;
@@ -755,8 +838,6 @@ main h1 {
     display: none;
   }
 }
-
-
 
 
 @media only screen and (max-height: 1044px) {

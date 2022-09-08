@@ -1,6 +1,6 @@
 import * as messageAPI from '../../utilities/message-api'
 import { useState } from 'react'
-export default function MessageCard({ message, idx}) {
+export default function MessageCard({ message, idx, lightMode}) {
     const [currentMessage, setCurrentMessage] = useState(message)
 
     async function handleReadMessage(evt) {
@@ -17,7 +17,7 @@ export default function MessageCard({ message, idx}) {
     }
 
     return (
-        <div className="message-info-wrapper">
+        <div className={lightMode ? "message-info-wrapper light-message-wrapper": "message-info-wrapper"}>
             <div className="one-line">
             { currentMessage.read === false ?
                 <form onSubmit={handleReadMessage}>
