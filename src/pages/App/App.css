@@ -1,5 +1,5 @@
 .App {
-  height: 91vh;
+  height: 92vh;
   padding: 3rem;
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(./bubble.jpg); */
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)) , url(./light2.jpg);
@@ -786,7 +786,7 @@ main h1 {
   }
   .App {
     padding: 2rem;
-    height: 90vh;
+    height: 92vh;
   }
   .ProfilePic-Wrapper {
     height: 60vh;
@@ -873,7 +873,7 @@ main h1 {
   }
   .App {
     padding: 1.5rem;
-    height: 90vh;
+    height: 92vh;
   }
   .Home-Info-Wrapper {
     height: 90vh;
