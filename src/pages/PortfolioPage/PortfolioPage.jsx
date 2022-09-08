@@ -1,10 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TimeSupCard from '../../components/TimeSupCard/TimeSupCard'
 import Foodscovery from '../../components/Foodscovery/Foodscovery'
 
 export default function PortfolioPage() {
     const [image, setImage] = useState(1)
     const [currentProject, setCurrentProject] = useState(1)
+
+useEffect(() => {
+    setImage(1)
+}, [currentProject])
 
     function tab1() {
         setImage(1)
