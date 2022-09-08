@@ -652,15 +652,20 @@ main h1 {
   border-radius: 2rem;
 }
 
-.timeSup-wrapper {
+.Projects-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeSup-wrapper, .foodscovery-wrapper {
   background: rgba(255, 255, 255, 0.1);
-  margin: 3rem 6rem 6rem 6rem;
+  margin: 3rem 6rem;
   padding: 0 2rem 2rem 2rem;
   border-radius: 2rem;
   overflow: auto;
 }
 
-.timeSup-wrapper::-webkit-scrollbar {
+.timeSup-wrapper::-webkit-scrollbar, .foodscovery-wrapper::-webkit-scrollbar {
   display: none;
 }
 
@@ -685,11 +690,10 @@ main h1 {
 
 .slider-image {
   float: left;
-  margin-right: 50px;
   padding: 0px;
   border-radius: .5rem;
   opacity: 20%;
-  transform: scale(.8);
+  transform: scale(.7);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.12);
   transition: 2s;
 }
@@ -700,7 +704,7 @@ main h1 {
 }
 
 .button-container {
-  top: -20px;
+  top: 3px;
   position: relative;
 }
 
@@ -720,11 +724,23 @@ main h1 {
 }
 
 #slider-image-2:target ~ .image-container {
-  left: -700px;
+  left: -650px;
 }
 
 #slider-image-3:target ~ .image-container {
-  left: -1400px;
+  left: -1300px;
+}
+
+#slider-image-4:target ~ .image-container {
+  left: 0px;
+}
+
+#slider-image-5:target ~ .image-container {
+  left: -650px;
+}
+
+#slider-image-6:target ~ .image-container {
+  left: -1300px;
 }
 
 .selected {
