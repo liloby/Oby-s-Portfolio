@@ -2,6 +2,10 @@ export default function TimeSupCard({ image, tab1, tab2, tab3 }) {
     return (
         <div className='timeSup-wrapper'> 
                 <h2>TimeSup</h2>
+                <div className='project-links'>
+                    <a target="_blank" href="https://timesupdateapp.herokuapp.com/">Link to App</a>
+                    <a target="_blank" href="https://github.com/liloby/TimeSup">Github</a>
+                </div>
                 <div className="slide-container">
                     <span id="slider-image-1"></span>
                     <span id="slider-image-2"></span>

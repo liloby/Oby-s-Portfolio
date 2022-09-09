@@ -2,6 +2,10 @@ export default function Blackjack({ image, tab1, tab2, tab3}) {
     return (
         <div className='blackjack-wrapper'> 
                 <h2>Blackjack</h2>
+                <div className='project-links'>
+                    <a target="_blank" href="https://liloby.github.io/blackjack-project1/">Link to App</a>
+                    <a target="_blank" href="https://github.com/liloby/blackjack-project1">Github</a>
+                </div>
                 <div className="slide-container">
                     <span id="slider-image-1"></span>
                     <span id="slider-image-2"></span>
