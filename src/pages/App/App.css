@@ -661,7 +661,7 @@ main h1 {
   flex-direction: column;
 }
 
-.timeSup-wrapper, .foodscovery-wrapper {
+.timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper {
   background: rgba(255, 255, 255, 0.1);
   margin: 3rem 6rem;
   padding: 0 2rem 2rem 2rem;
@@ -669,7 +669,7 @@ main h1 {
   overflow: auto;
 }
 
-.timeSup-wrapper::-webkit-scrollbar, .foodscovery-wrapper::-webkit-scrollbar {
+.timeSup-wrapper::-webkit-scrollbar, .foodscovery-wrapper::-webkit-scrollbar, .blackjack-wrapper::-webkit-scrollbar  {
   display: none;
 }
 
@@ -723,6 +723,12 @@ main h1 {
   opacity: 50%;
 }
 
+.project-btn {
+  margin: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+}
+
 #slider-image-1:target ~ .image-container {
   left: 0px;
 }
@@ -736,16 +742,9 @@ main h1 {
 }
 
 #slider-image-4:target ~ .image-container {
-  left: 0px;
+  left: -1115px;
 }
 
-#slider-image-5:target ~ .image-container {
-  left: -650px;
-}
-
-#slider-image-6:target ~ .image-container {
-  left: -1300px;
-}
 
 .selected {
   opacity: 100%;
@@ -846,6 +845,9 @@ main h1 {
   .LightMode-wrapper {
     justify-content: flex-end;
   }
+  .project-btn {
+    margin: .8rem;
+  }
 }
 
 
@@ -943,5 +945,8 @@ main h1 {
   }
   .contact-icons {
     width: 100%;
+  }
+  .project-btn {
+    margin: .4rem;
   }
 }
