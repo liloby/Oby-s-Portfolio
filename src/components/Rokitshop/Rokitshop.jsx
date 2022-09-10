@@ -1,6 +1,6 @@
 export default function Rokitshop({ image, tab1, tab2, tab3}) {
     return (
-        <div className='foodscovery-wrapper'> 
+        <div className='rokitshop-wrapper'> 
                 <h2>Rokitshop</h2>
                 <div className='project-links'>
                     <a target="_blank" href="https://rokitshop.herokuapp.com/">Link to App</a>

@@ -74,6 +74,9 @@ nav {
   border-right: .3px solid rgba(255, 255, 255, 0.254);
 }
 
+nav::-webkit-scrollbar {
+  display: none;
+}
 
 .Routes {
   grid-area: 1 / 3 / 9 / 9; 
@@ -225,6 +228,7 @@ a {
   display: inline-block;
   font-style: italic;
   animation: pulse 5s infinite;
+  -webkit-animation: pulse 5s infinite;
   transition: 1s;
 }
 
@@ -659,9 +663,11 @@ main h1 {
 .Projects-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
-.timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper {
+.timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper, .rokitshop-wrapper {
   background: rgba(255, 255, 255, 0.1);
   margin: 3rem 6rem;
   padding: 0 2rem 2rem 2rem;
@@ -771,7 +777,7 @@ main h1 {
   opacity: 50%;
 }
 
-@media only screen and (max-width: 1280px), screen and (max-height: 650px) {
+@media only screen and (max-width: 1180px), screen and (max-height: 650px) {
   .About-Info-Wrapper {
     display: flex;
     flex-direction: column;
@@ -800,7 +806,7 @@ main h1 {
     border: none;
     border-radius: 2rem;
     margin: 0 auto;
-    height: 90vh;
+    height: 92vh;
     width: 32vw;
     z-index: 2;
   }
@@ -809,11 +815,12 @@ main h1 {
     height: 92vh;
   }
   .ProfilePic-Wrapper {
-    height: 60vh;
+    height: 44vh;
     align-items: center;
   }
   .ProfilePic {
     width: 60vw;
+    height: 25rem;
   }
   .contact-icons {
     border-radius: 2rem;
@@ -889,10 +896,54 @@ main h1 {
   }
 }
 
+@media only screen and (max-width: 1450px) {
+  .slider-image {
+    height: 300px;
+    width: 450px;
+  }
+  .image-container {
+    height: 300px;
+    width: 1400px;
+  }
+  .slide-container {
+    height: 300px;
+    width: 450px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -450px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -900px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -900px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper, .rokitshop-wrapper {
+    margin: 3rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper, .rokitshop-wrapper {
+    margin: 3rem 1rem;
+  }
+}
+
+
 @media only screen and (max-width: 700px) {
   nav {
     height: 2.5%;
     width: 8%;
+    overflow: auto;
   }
   .App {
     padding: 1.5rem;
@@ -912,7 +963,7 @@ main h1 {
   }
   nav:hover {
     width: 65vw;
-    height: 90vh;
+    height: 92vh;
   }
   a {
     padding: .3rem 4rem;
@@ -969,5 +1020,202 @@ main h1 {
   }
   .project-btn {
     margin: .4rem;
+  }
+  .HomeName {
+    font-size: 2rem;
+  } 
+  .paragraph {
+    font-size: 1.5rem;
+  }
+  .ClickAbout {
+    font-size: 1rem;
+  }
+  .slider-image {
+    height: 300px;
+    width: 400px;
+  }
+  .image-container {
+    height: 300px;
+    width: 1200px;
+  }
+  .slide-container {
+    height: 300px;
+    width: 400px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -400px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -800px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -800px;
+  }
+  .project-btn {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper, .rokitshop-wrapper {
+    margin: 3rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 584px) {
+  .project-links a {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+  .slider-button {
+    height: 15px;
+    width: 15px;
+  }
+  .slider-image {
+    height: 280px;
+    width: 350px;
+  }
+  .image-container {
+    height: 280px;
+    width: 1050px;
+  }
+  .slide-container {
+    height: 280px;
+    width: 350px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -350px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -700px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -700px;
+  }
+  .project-btn {
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .project-btn {
+    font-size: .75rem;
+  }
+  .slider-button {
+    height: 15px;
+    width: 15px;
+  }
+  .slider-image {
+    height: 250px;
+    width: 320px;
+  }
+  .image-container {
+    height: 250px;
+    width: 960px;
+  }
+  .slide-container {
+    height: 250px;
+    width: 320px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -320px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -640px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -640px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .project-btn {
+    font-size: .6rem;
+  }
+  .slider-button {
+    height: 15px;
+    width: 15px;
+  }
+  .slider-image {
+    height: 200px;
+    width: 280px;
+  }
+  .image-container {
+    height: 200px;
+    width: 840px;
+  }
+  .slide-container {
+    height: 200px;
+    width: 280px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -280px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -560px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -560px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .project-btn {
+    font-size: .5rem;
+  }
+  .slider-button {
+    height: 15px;
+    width: 15px;
+  }
+  .slider-image {
+    height: 180px;
+    width: 240px;
+  }
+  .image-container {
+    height: 180px;
+    width: 720px;
+  }
+  .slide-container {
+    height: 180px;
+    width: 240px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -240px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -480px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -480px;
   }
 }
