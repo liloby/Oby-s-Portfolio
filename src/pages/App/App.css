@@ -107,12 +107,12 @@ nav::-webkit-scrollbar {
 }
 
 .Avatar {
-  background: url(./Avatar2.png);
+  background: url(./avatar.png), linear-gradient(90deg, rgba(0, 0, 0, 0.855), rgba(255, 255, 255, 0.499), rgba(0, 0, 0, 0.855));
   min-height: 10rem;
   min-width: 10rem;
-  background-size:cover;
-  background-position: center;
+  background-size: 100%;
   border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.501);
 }
 
 .border {
@@ -312,6 +312,7 @@ a {
   background: rgba(200,200,200,.3);
   padding: .8rem;
   border-radius: 2rem;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.355);
 }
 
 .lightSkills p {
@@ -320,6 +321,7 @@ a {
   background: rgba(255, 255, 255, 0.682);
   padding: .8rem;
   border-radius: 2rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.355);
 }
 
 .AboutMe-Wrapper {
@@ -353,10 +355,12 @@ a {
 
 .darkForm {
   background: rgba(255, 255, 255, 0.154);
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.355);
 }
 
 .lightForm {
   background: rgba(255, 255, 255, 0.6);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.355);
 }
 
 .message {
@@ -449,10 +453,12 @@ button:hover {
   width: 50%;
   max-width: 32rem;
   transition: 1s;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.355);
 }
 
 .lightContact-icons {
   background: rgba(255, 255, 255, 0.6);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.355);
 }
 
 .github {
@@ -673,10 +679,12 @@ main h1 {
   padding: 0 2rem 2rem 2rem;
   border-radius: 2rem;
   overflow: auto;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.355);
 }
 
 .light-project {
   background: rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.355);
 }
 
 .timeSup-wrapper::-webkit-scrollbar, .foodscovery-wrapper::-webkit-scrollbar, .blackjack-wrapper::-webkit-scrollbar, .rokitshop-wrapper::-webkit-scrollbar  {
