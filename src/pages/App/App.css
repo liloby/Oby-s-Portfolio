@@ -901,6 +901,10 @@ main h1 {
     height: 300px;
     width: 450px;
   }
+  .mobile-image {
+    height: 300px;
+    width: 140px;
+  }
   .image-container {
     height: 300px;
     width: 1400px;
@@ -922,7 +926,7 @@ main h1 {
   }
   
   #slider-image-4:target ~ .image-container {
-    left: -900px;
+    left: -743px;
   }
 }
 
@@ -1034,6 +1038,10 @@ main h1 {
     height: 300px;
     width: 400px;
   }
+  .mobile-image {
+    height: 300px;
+    width: 140px;
+  }
   .image-container {
     height: 300px;
     width: 1200px;
@@ -1053,9 +1061,8 @@ main h1 {
   #slider-image-3:target ~ .image-container {
     left: -800px;
   }
-  
   #slider-image-4:target ~ .image-container {
-    left: -800px;
+    left: -670px;
   }
   .project-btn {
     font-size: 1rem;
@@ -1081,6 +1088,10 @@ main h1 {
     height: 280px;
     width: 350px;
   }
+  .mobile-image {
+    height: 280px;
+    width: 130px;
+  }
   .image-container {
     height: 280px;
     width: 1050px;
@@ -1102,7 +1113,7 @@ main h1 {
   }
   
   #slider-image-4:target ~ .image-container {
-    left: -700px;
+    left: -590px;
   }
   .project-btn {
     font-size: .9rem;
@@ -1129,6 +1140,10 @@ main h1 {
     height: 250px;
     width: 320px
   }
+  .mobile-image {
+    height: 250px;
+    width: 120px;
+  }
   #slider-image-1:target ~ .image-container {
     left: 0px;
   }
@@ -1142,7 +1157,7 @@ main h1 {
   }
   
   #slider-image-4:target ~ .image-container {
-    left: -640px;
+    left: -540px;
   }
 }
 
@@ -1157,6 +1172,10 @@ main h1 {
   .slider-image {
     height: 200px;
     width: 280px;
+  }
+  .mobile-image {
+    height: 200px;
+    width: 97px;
   }
   .image-container {
     height: 200px;
@@ -1179,7 +1198,7 @@ main h1 {
   }
   
   #slider-image-4:target ~ .image-container {
-    left: -560px;
+    left: -468px;
   }
 }
 
@@ -1194,6 +1213,10 @@ main h1 {
   .slider-image {
     height: 180px;
     width: 240px;
+  }
+  .mobile-image {
+    height: 180px;
+    width: 85px;
   }
   .image-container {
     height: 180px;
@@ -1216,6 +1239,6 @@ main h1 {
   }
   
   #slider-image-4:target ~ .image-container {
-    left: -480px;
+    left: -402px;
   }
 }

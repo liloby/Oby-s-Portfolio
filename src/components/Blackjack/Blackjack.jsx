@@ -13,7 +13,7 @@ export default function Blackjack({ image, tab1, tab2, tab3}) {
                     <div className="image-container">
                         <img className={image === 1 ? "slider-image selected-image" : "slider-image"} src={require('./Blackjack/start.png')} height="550px" width="650px" />
                         <img className={image === 2 ? "slider-image selected-image" : "slider-image"} src={require('./Blackjack/process.png')}  height="550px" width="650px" />
-                        <img className={image === 3 ? "slider-image selected-image" : "slider-image"} src={require('./Blackjack/mobile.png')}  height="550px" width="280px" />
+                        <img className={image === 3 ? "slider-image selected-image mobile-image" : "slider-image mobile-image"} src={require('./Blackjack/mobile.png')}  height="550px" width="280px" />
                     </div>
                     <div className="button-container">
                         <a href="#slider-image-1" onClick={tab1} className={image === 1 ? 'selected slider-button': 'slider-button'}></a>
