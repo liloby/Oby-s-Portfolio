@@ -748,11 +748,14 @@ main h1 {
   padding: .5rem 1rem;
   border-radius: 2rem;
   transition: none;
+  background: linear-gradient(140deg, rgba(0,255,255, .5), rgba(255, 255, 255, .5));
 }
 
 .selected-project {
   box-shadow: 0px 0px 10px 5px #2992bd;
 }
+
+
 
 #slider-image-1:target ~ .image-container {
   left: 0px;
