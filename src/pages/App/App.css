@@ -811,7 +811,7 @@ main h1 {
     border: none;
     border-radius: 2rem;
     margin: 0 auto;
-    height: 92vh;
+    height: 85vh;
     width: 32vw;
     z-index: 2;
     overflow: auto;
@@ -973,7 +973,7 @@ main h1 {
   }
   nav:hover {
     width: 65vw;
-    height: 92vh;
+    height: 85vh;
   }
   a {
     padding: .3rem 4rem;
@@ -1246,5 +1246,11 @@ main h1 {
   
   #slider-image-4:target ~ .image-container {
     left: -402px;
+  }
+  a:hover {
+    opacity: 100%;
+  }
+  button:hover {
+    opacity: 100%;
   }
 }
