@@ -160,7 +160,7 @@ nav::-webkit-scrollbar {
 }
 
 .lightExperiences {
-  color: #321f5b;
+  color: #4d2e90;
  }
  
 .ContactHref {
@@ -675,7 +675,11 @@ main h1 {
   overflow: auto;
 }
 
-.timeSup-wrapper::-webkit-scrollbar, .foodscovery-wrapper::-webkit-scrollbar, .blackjack-wrapper::-webkit-scrollbar  {
+.light-project {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.timeSup-wrapper::-webkit-scrollbar, .foodscovery-wrapper::-webkit-scrollbar, .blackjack-wrapper::-webkit-scrollbar, .rokitshop-wrapper::-webkit-scrollbar  {
   display: none;
 }
 
@@ -735,6 +739,7 @@ main h1 {
   margin: 1rem;
   padding: .5rem 1rem;
   border-radius: 2rem;
+  transition: none;
 }
 
 .selected-project {
@@ -796,7 +801,7 @@ main h1 {
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     border-right: none;
-    transition: 1s;
+    transition: .7s;
     color: white;
   }
   nav:hover {
@@ -809,6 +814,7 @@ main h1 {
     height: 92vh;
     width: 32vw;
     z-index: 2;
+    overflow: auto;
   }
   .App {
     padding: 2rem;

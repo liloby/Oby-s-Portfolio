@@ -1,6 +1,6 @@
-export default function Foodscovery({ image, tab1, tab2, tab3}) {
+export default function Foodscovery({ image, tab1, tab2, tab3, lightMode}) {
     return (
-        <div className='foodscovery-wrapper'> 
+        <div className={lightMode ? 'foodscovery-wrapper light-project' : 'foodscovery-wrapper'}> 
                 <h2>Foodscovery</h2>
                 <div className='project-links'>
                     <a target="_blank" href="https://foodscovery.herokuapp.com/">Link to App</a>

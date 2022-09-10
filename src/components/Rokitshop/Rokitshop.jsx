@@ -1,6 +1,6 @@
-export default function Rokitshop({ image, tab1, tab2, tab3}) {
+export default function Rokitshop({ image, tab1, tab2, tab3, lightMode}) {
     return (
-        <div className='rokitshop-wrapper'> 
+        <div className={lightMode ? 'rokitshop-wrapper light-project' : 'rokitshop-wrapper'}> 
                 <h2>Rokitshop</h2>
                 <div className='project-links'>
                     <a target="_blank" href="https://rokitshop.herokuapp.com/">Link to App</a>

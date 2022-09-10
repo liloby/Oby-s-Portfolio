@@ -1,6 +1,6 @@
-export default function TimeSupCard({ image, tab1, tab2, tab3 }) {
+export default function TimeSupCard({ image, tab1, tab2, tab3, lightMode }) {
     return (
-        <div className='timeSup-wrapper'> 
+        <div className={lightMode ? 'timeSup-wrapper light-project' : 'timeSup-wrapper'}> 
                 <h2>TimeSup</h2>
                 <div className='project-links'>
                     <a target="_blank" href="https://timesupdateapp.herokuapp.com/">Link to App</a>

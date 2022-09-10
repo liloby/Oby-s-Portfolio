@@ -4,7 +4,7 @@ import Foodscovery from '../../components/Foodscovery/Foodscovery'
 import Blackjack from '../../components/Blackjack/Blackjack'
 import Rokitshop from '../../components/Rokitshop/Rokitshop'
 
-export default function PortfolioPage() {
+export default function PortfolioPage({lightMode}) {
     const [image, setImage] = useState(1)
     const [currentProject, setCurrentProject] = useState(1)
 
@@ -44,7 +44,6 @@ useEffect(() => {
     return (
         <div className="Routes">
             <div className="Projects-wrapper">
-                <h1>My Projects</h1>
                 <div>
                     <button className={currentProject === 1 ? 'selected-project project-btn' : 'project-btn'} onClick={Project1}>TimeSup</button>
                     <button className={currentProject === 2 ? 'selected-project project-btn' : 'project-btn'} onClick={Project2}>Foodscovery</button>
@@ -52,13 +51,13 @@ useEffect(() => {
                     <button className={currentProject === 4 ? 'selected-project project-btn' : 'project-btn'} onClick={Project4}>RokitShop</button>
                 </div>
                 { currentProject === 1 ?
-                <TimeSupCard image={image} tab1={tab1} tab2={tab2} tab3={tab3} />
+                <TimeSupCard image={image} tab1={tab1} tab2={tab2} tab3={tab3} lightMode={lightMode} />
                 : currentProject === 2 ?
-                <Foodscovery image={image} tab1={tab1} tab2={tab2} tab3={tab3} />
+                <Foodscovery image={image} tab1={tab1} tab2={tab2} tab3={tab3} lightMode={lightMode} />
                 : currentProject === 3 ?
-                <Blackjack image={image} tab1={tab1} tab2={tab2} tab3={tab3} />
+                <Blackjack image={image} tab1={tab1} tab2={tab2} tab3={tab3} lightMode={lightMode} />
                 :
-                <Rokitshop image={image} tab1={tab1} tab2={tab2} tab3={tab3} />
+                <Rokitshop image={image} tab1={tab1} tab2={tab2} tab3={tab3} lightMode={lightMode} />
                 }
             </div>
         </div>

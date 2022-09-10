@@ -1,6 +1,6 @@
-export default function Blackjack({ image, tab1, tab2, tab3}) {
+export default function Blackjack({ image, tab1, tab2, tab3, lightMode}) {
     return (
-        <div className='blackjack-wrapper'> 
+        <div className={lightMode ? 'blackjack-wrapper light-project' : 'blackjack-wrapper'}> 
                 <h2>Blackjack</h2>
                 <div className='project-links'>
                     <a target="_blank" href="https://liloby.github.io/blackjack-project1/">Link to App</a>
