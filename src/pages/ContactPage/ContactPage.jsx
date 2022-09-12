@@ -57,7 +57,7 @@ export default function ContactPage({lightMode}) {
           <a href="https://github.com/liloby" target="_blank">
             <div className="github"></div>
           </a>
-          <a href="https://www.linkedin.com/in/oby-li-37276086/" target="_blank">
+          <a href="https://linkedin.com/in/oby-li" target="_blank">
             <div className="linkedin"></div>
           </a>
           <a href="mailto: obyli214@gmail.com" target="_blank">
