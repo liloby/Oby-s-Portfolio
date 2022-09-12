@@ -756,6 +756,11 @@ main h1 {
   background: linear-gradient(140deg, rgba(0,255,255, .5), rgba(255, 255, 255, .5));
 }
 
+.project-btn:hover {
+  opacity: 100%;
+  box-shadow: 0px 0px 10px 5px #2992bd;
+}
+
 .selected-project {
   box-shadow: 0px 0px 10px 5px #2992bd;
 }
@@ -819,6 +824,17 @@ main h1 {
   background-size: 100% 1px;
 }
 
+.resume-wrapper a {
+  color: black;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.509);
+  padding: 0.1rem 1rem;
+  border-radius: .5rem;
+}
+
+.resume-wrapper a:hover {
+  opacity: 50%;
+}
 
 
 @media only screen and (max-width: 1180px), screen and (max-height: 650px) {
@@ -1325,5 +1341,15 @@ main h1 {
   }
   button:hover {
     opacity: 100%;
+  }
+  .Avatar {
+    min-height: 6rem;
+    min-width: 6rem;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+  .role {
+    font-size: 1rem;
   }
 }
