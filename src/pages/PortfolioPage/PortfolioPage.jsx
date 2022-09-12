@@ -45,10 +45,10 @@ useEffect(() => {
         <div className="Routes">
             <div className="Projects-wrapper">
                 <div>
-                    <button className={currentProject === 1 ? 'selected-project project-btn timesup-btn' : 'project-btn timesup-btn'} onClick={Project1}>TimeSup</button>
-                    <button className={currentProject === 2 ? 'selected-project project-btn foodscovery-btn' : 'project-btn foodscovery-btn'} onClick={Project2}>Foodscovery</button>
-                    <button className={currentProject === 3 ? 'selected-project project-btn blackjack-btn' : 'project-btn blackjack-btn'} onClick={Project3}>Blackjack</button>
-                    <button className={currentProject === 4 ? 'selected-project project-btn rokitshop-btn' : 'project-btn rokitshop-btn'} onClick={Project4}>RokitShop</button>
+                    <button className={currentProject === 1 ? 'selected-project project-btn timesup-btn' : 'project-btn timesup-btn'} style={lightMode ? {color: 'black'} : {color: 'white'}} onClick={Project1}>TimeSup</button>
+                    <button className={currentProject === 2 ? 'selected-project project-btn foodscovery-btn' : 'project-btn foodscovery-btn'} style={lightMode ? {color: 'black'} : {color: 'white'}} onClick={Project2}>Foodscovery</button>
+                    <button className={currentProject === 3 ? 'selected-project project-btn blackjack-btn' : 'project-btn blackjack-btn'} style={lightMode ? {color: 'black'} : {color: 'white'}} onClick={Project3}>Blackjack</button>
+                    <button className={currentProject === 4 ? 'selected-project project-btn rokitshop-btn' : 'project-btn rokitshop-btn'} style={lightMode ? {color: 'black'} : {color: 'white'}} onClick={Project4}>RokitShop</button>
                 </div>
                 { currentProject === 1 ?
                 <TimeSupCard image={image} tab1={tab1} tab2={tab2} tab3={tab3} lightMode={lightMode} />
