@@ -755,8 +755,6 @@ main h1 {
   box-shadow: 0px 0px 10px 5px #2992bd;
 }
 
-
-
 #slider-image-1:target ~ .image-container {
   left: 0px;
 }
@@ -778,11 +776,33 @@ main h1 {
   opacity: 100%;
 }
 
+.project-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .project-links a {
   text-decoration: none;
   color: rgb(255, 0, 132);
-  display: inline-block;
+  border-radius: 0;
   margin-bottom: 1rem;
+  padding: .5rem 0 .5rem 0;
+  display: inline-block;
+  padding-bottom: 2px;
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.dark-a {
+  background-image: linear-gradient(rgb(254, 254, 254) 0 0);
+}
+
+.light-a {
+  background-image: linear-gradient(rgb(55, 55, 55) 0 0);
 }
 
 .project-links a:visited {
@@ -790,7 +810,8 @@ main h1 {
 }
 
 .project-links a:hover {
-  opacity: 50%;
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
 }
 
 @media only screen and (max-width: 1180px), screen and (max-height: 650px) {
@@ -910,6 +931,40 @@ main h1 {
 @media only screen and (max-height: 1044px) {
    .Experience-wrapper {
     justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-height: 950px) {
+  .slider-image {
+    height: 350px;
+    width: 450px;
+  }
+  .mobile-image {
+    height: 350px;
+    width: 140px;
+  }
+  .image-container {
+    height: 350px;
+    width: 1400px;
+  }
+  .slide-container {
+    height: 350px;
+    width: 450px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -450px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -900px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -743px;
   }
 }
 

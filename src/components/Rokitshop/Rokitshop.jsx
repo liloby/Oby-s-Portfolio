@@ -2,9 +2,10 @@ export default function Rokitshop({ image, tab1, tab2, tab3, lightMode}) {
     return (
         <div className={lightMode ? 'rokitshop-wrapper light-project' : 'rokitshop-wrapper'}> 
                 <h2>Rokitshop</h2>
+                <h4>Browse, Bid, and Sell any items at ease</h4>
                 <div className='project-links'>
-                    <a target="_blank" href="https://rokitshop.herokuapp.com/">Link to App</a>
-                    <a target="_blank" href="https://github.com/ajebora1/rokitshop">Github</a>
+                    <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://rokitshop.herokuapp.com/">Live App</a>
+                    <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/ajebora1/rokitshop">Github</a>
                 </div>
                 <div className="slide-container">
                     <span id="slider-image-1"></span>

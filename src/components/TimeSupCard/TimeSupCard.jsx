@@ -2,9 +2,10 @@ export default function TimeSupCard({ image, tab1, tab2, tab3, lightMode }) {
     return (
         <div className={lightMode ? 'timeSup-wrapper light-project' : 'timeSup-wrapper'}> 
                 <h2>TimeSup</h2>
+                <h4>Dating App that features an expiration date on each match</h4>
                 <div className='project-links'>
-                    <a target="_blank" href="https://timesupdateapp.herokuapp.com/">Link to App</a>
-                    <a target="_blank" href="https://github.com/liloby/TimeSup">Github</a>
+                    <a className={lightMode ? "light-a" : "dark-a"} target="_blank" href="https://timesupdateapp.herokuapp.com/">Live App</a>
+                    <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/liloby/TimeSup">Github</a>
                 </div>
                 <div className="slide-container">
                     <span id="slider-image-1"></span>
