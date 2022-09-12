@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+* {
+  font-family: 'Laila', sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -54,7 +58,7 @@ body {
 
 .modeSwitch {
   margin: 0 0 .5rem 0;
-  padding: .3rem .5rem;
+  padding: .2rem .55rem;
   border-radius: 100%;
 }
 
@@ -191,6 +195,7 @@ a {
 
 .name {
   font-size: 2rem;
+  margin-top: 1rem;
 }
 
 .role {
@@ -786,11 +791,11 @@ main h1 {
   color: rgb(255, 0, 132);
   border-radius: 0;
   margin-bottom: 1rem;
-  padding: .5rem 0 .5rem 0;
+  padding: 0;
   display: inline-block;
   padding-bottom: 2px;
   background-position: 0 100%; /*OR bottom left*/
-  background-size: 0% 2px;
+  background-size: 0% 1px;
   background-repeat: no-repeat;
   transition:
     background-size 0.3s,
@@ -811,8 +816,10 @@ main h1 {
 
 .project-links a:hover {
   background-position: 100% 100%; /*OR bottom right*/
-  background-size: 100% 2px;
+  background-size: 100% 1px;
 }
+
+
 
 @media only screen and (max-width: 1180px), screen and (max-height: 650px) {
   .About-Info-Wrapper {
