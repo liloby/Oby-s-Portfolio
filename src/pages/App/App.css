@@ -681,7 +681,7 @@ main h1 {
 .timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper, .rokitshop-wrapper {
   background: rgba(255, 255, 255, 0.1);
   margin: 3rem 6rem;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem 3rem 2rem;
   border-radius: 2rem;
   overflow: auto;
   box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.355);
@@ -733,14 +733,14 @@ main h1 {
 }
 
 .button-container {
-  top: 3px;
+  top: 10px;
   position: relative;
 }
 
 .slider-button {
   display: inline-block;
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   padding: 0px;
   margin: 5px;
   border-radius: 100%;
@@ -1283,7 +1283,7 @@ main h1 {
 
 @media only screen and (max-width: 420px) {
   .project-btn {
-    font-size: .5rem;
+    font-size: .4rem;
   }
   .slider-button {
     height: 15px;
