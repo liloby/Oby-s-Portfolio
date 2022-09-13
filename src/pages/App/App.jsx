@@ -15,7 +15,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [currentPage, setCurrentPage] = useState(1);
   const [lightMode, setLightMode] = useState(false)
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(true)
 
   function handleHomePage() {
     setCurrentPage(1);
