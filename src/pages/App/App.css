@@ -1,3 +1,6 @@
+html {
+  overflow: hidden;
+}
 .App {
   height: 92vh;
   padding: 3rem;
