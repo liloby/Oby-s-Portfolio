@@ -22,14 +22,13 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  grid-column-gap: 0px;
+  grid-column-gap: 1rem;
   grid-row-gap: 0px;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.115);
+  /* background: rgba(255, 255, 255, 0.115); */
   display: flex;
   border-radius: 2rem;
-  backdrop-filter: blur(20px);
   color: white;
   transition: 1s;
 }
@@ -42,13 +41,8 @@ body {
 }
 
 .lightModeMain {
-  color: rgb(55, 55, 55);
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px);
-}
-
-.lightModeNav {
-  border-right: 0.3px solid rgba(0, 0, 0, 0.402);
+  color: rgb(0, 0, 0);
+  /* background: rgba(255, 255, 255, 0.35); */
 }
 
 .lightModeBorder {
@@ -71,11 +65,19 @@ body {
   width: 90%;
 }
 
+.lightModeNav {
+  background: rgba(141, 186, 222, 0.4);
+  border-radius: 2rem;
+  backdrop-filter: blur(5px);
+}
+
 nav {
   grid-area: 1 / 1 / 9 / 3; 
   display: grid;
   grid-template-rows: 1fr .05fr 3fr;
-  border-right: .3px solid rgba(255, 255, 255, 0.254);
+  background: rgba(46, 46, 60, .5);
+  border-radius: 2rem;
+  backdrop-filter: blur(5px);
 }
 
 nav::-webkit-scrollbar {
@@ -364,7 +366,7 @@ a {
 }
 
 .lightForm {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.355);
 }
 
@@ -462,7 +464,7 @@ button:hover {
 }
 
 .lightContact-icons {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.355);
 }
 
@@ -858,9 +860,11 @@ main h1 {
     border-right: none;
     transition: .7s;
     color: white;
+    border-radius: 0;
+    background: none;
   }
   nav:hover {
-    background: rgba(1, 0, 38, .95);
+    background: rgba(46, 46, 60, .9);
     left: 0;
     top: 0;
     border: none;
@@ -927,7 +931,12 @@ main h1 {
   }
   .lightModeNav {
     border-right: none;
+    border-radius: 0;
+    background: none;
   }
+  .lightModeNav:hover {
+    background: rgba(141, 186, 222, 0.9);
+  } 
   .role {
     color: white;
   }
