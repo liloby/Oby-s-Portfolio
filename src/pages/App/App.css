@@ -1178,7 +1178,7 @@ main h1 {
 
 @media only screen and (max-width: 600px) {
   .timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper, .rokitshop-wrapper {
-    margin: 3rem 0rem;
+    margin: 3rem 1rem;
   }
 }
 
@@ -1363,5 +1363,12 @@ main h1 {
   }
   .role {
     font-size: 1rem;
+  }
+  .message form {
+    padding: 1.5rem;
+  }
+  .contact-icons {
+    width: 95%;
+    margin: 1rem 0 .5rem 0;
   }
 }
