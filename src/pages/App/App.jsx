@@ -19,22 +19,27 @@ export default function App() {
 
   function handleHomePage() {
     setCurrentPage(1);
+    setShowMenu(!showMenu)
   }
 
   function handleAboutPage() {
     setCurrentPage(2);
+    setShowMenu(!showMenu)
   }
 
   function handlePortfolioPage() {
     setCurrentPage(3);
+    setShowMenu(!showMenu)
   }
 
   function handleExperiencesPage() {
     setCurrentPage(4);
+    setShowMenu(!showMenu)
   }
 
   function handleContactPage() {
     setCurrentPage(5);
+    setShowMenu(!showMenu)
   }
 
   function handleLightMode() {
