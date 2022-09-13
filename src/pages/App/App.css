@@ -855,7 +855,7 @@ main h1 {
     height: 90vh;
     width: 100vw;
     color: white;
-    border-radius: 2rem;
+    border-radius: 0 0 2rem 2rem;
     background: rgba(46, 46, 60, .9);
     z-index: 2;
   }
