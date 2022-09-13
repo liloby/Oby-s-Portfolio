@@ -11,7 +11,7 @@
 }
 
 * {
-  font-family: 'Laila', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -751,10 +751,10 @@ main h1 {
 
 .project-btn {
   margin: 1rem;
-  padding: .5rem 1rem;
-  border-radius: 2rem;
+  padding: .5rem .7rem;
+  border-radius: 1rem;
   transition: none;
-  background: linear-gradient(140deg, rgba(0,255,255, .5), rgba(255, 255, 255, .5));
+  background: linear-gradient(30deg, rgba(130,193,249, .5), rgba(255, 255, 255, .5));
 }
 
 .project-btn:hover {
@@ -835,6 +835,11 @@ main h1 {
 
 .resume-wrapper a:hover {
   opacity: 50%;
+}
+
+.project-btn-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 
@@ -986,9 +991,20 @@ main h1 {
   }
 }
 
+@media only screen and (max-height: 720px) {
+  .Avatar {
+    min-height: 6rem;
+    min-width: 6rem;
+  }
+  .name {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+  }
+}
+
 
 @media only screen and (max-height: 1044px) {
-   .Experience-wrapper {
+  .Experience-wrapper {
     justify-content: flex-start;
   }
 }
@@ -1073,6 +1089,42 @@ main h1 {
   }
 }
 
+@media only screen and (max-height: 780px) {
+  .slider-image {
+    height: 200px;
+    width: 300px;
+  }
+  .mobile-image {
+    height: 200px;
+    width: 100px;
+  }
+  .image-container {
+    height: 200px;
+    width: 1400px;
+  }
+  .slide-container {
+    height: 200px;
+    width: 300px
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -300px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -600px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -500px;
+  }
+   .timeSup-wrapper, .foodscovery-wrapper, .blackjack-wrapper, .rokitshop-wrapper {
+    margin: 2rem 5rem 3rem 5rem;
+  }
+}
 
 @media only screen and (max-width: 700px) {
   nav {
@@ -1373,7 +1425,7 @@ main h1 {
 
 @media only screen and (max-width: 420px) {
   .project-btn {
-    font-size: .4rem;
+    font-size: .5rem;
   }
   .slider-button {
     height: 15px;
@@ -1438,5 +1490,12 @@ main h1 {
   }
   .Experience-wrapper {
     border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .project-btn-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -44,7 +44,7 @@ useEffect(() => {
     return (
         <div className="Routes">
             <div className="Projects-wrapper">
-                <div>
+                <div className='project-btn-wrapper'>
                     <button className={currentProject === 1 ? 'selected-project project-btn timesup-btn' : 'project-btn timesup-btn'} style={lightMode ? {color: 'black'} : {color: 'white'}} onClick={Project1}>TimeSup</button>
                     <button className={currentProject === 2 ? 'selected-project project-btn foodscovery-btn' : 'project-btn foodscovery-btn'} style={lightMode ? {color: 'black'} : {color: 'white'}} onClick={Project2}>Foodscovery</button>
                     <button className={currentProject === 3 ? 'selected-project project-btn blackjack-btn' : 'project-btn blackjack-btn'} style={lightMode ? {color: 'black'} : {color: 'white'}} onClick={Project3}>Blackjack</button>
