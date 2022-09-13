@@ -14,6 +14,7 @@ export default function NavBar({
   handleContactPage,
   handleLightMode,
   lightMode,
+  showMenu,
 }) {
   const [messages, setMessages] = useState([]);
 
@@ -38,7 +39,13 @@ export default function NavBar({
     setUser(null);
   }
   return (
-    <nav className={lightMode ? "lightModeNav" : ""}>
+    <nav className={lightMode && showMenu ? "lightModeNav hideNav"
+                    : showMenu ? "hideNav" 
+                    : lightMode && !showMenu ? "lightModeNav showNav"
+                    : !showMenu ? "showNav"
+                    :
+                    ""
+      }>
       <div className="Avatar-info-wrapper">
         <div className="LightMode-wrapper">
           <button className={lightMode? "modeSwitch modeSwitchLight" : "modeSwitch"} onClick={handleLightMode}>

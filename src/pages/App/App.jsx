@@ -15,6 +15,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [currentPage, setCurrentPage] = useState(1);
   const [lightMode, setLightMode] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
   function handleHomePage() {
     setCurrentPage(1);
@@ -48,6 +49,7 @@ export default function App() {
     <main className={lightMode ? "lightModeApp App" : "App"}>
       {
         <div className={lightMode ? "lightModeMain Main-Container-Wrapper" : "Main-Container-Wrapper"}>
+          <div className={showMenu? "menu small-screen" :"menu small-screen close-menu"} onClick={() => setShowMenu(!showMenu)}></div>
           <NavBar
             user={user}
             setUser={setUser}
@@ -60,6 +62,7 @@ export default function App() {
             handleContactPage={handleContactPage}
             handleLightMode={handleLightMode}
             lightMode={lightMode}
+            showMenu={showMenu}
           />
           <Routes>
             <Route path="/" element={<HomePage handleAboutPage={handleAboutPage} lightMode={lightMode} />} />
