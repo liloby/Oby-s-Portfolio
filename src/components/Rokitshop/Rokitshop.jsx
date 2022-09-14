@@ -12,9 +12,9 @@ export default function Rokitshop({ image, tab1, tab2, tab3, lightMode}) {
                     <span id="slider-image-2"></span>
                     <span id="slider-image-3"></span>
                     <div className="image-container">
-                        <img className={image === 1 ? "slider-image selected-image" : "slider-image"} src={require('./Rokitshop/home.png')} height="500px" width="650px" />
-                        <img className={image === 2 ? "slider-image selected-image" : "slider-image"} src={require('./Rokitshop/index.png')}  height="500px" width="650px" />
-                        <img className={image === 3 ? "slider-image selected-image" : "slider-image"} src={require('./Rokitshop/profile.png')}  height="500px" width="650px" />
+                        <img className={image === 1 ? "slider-image selected-image" : "slider-image"} src={require('./Rokitshop/home.png')} height="450px" width="650px" />
+                        <img className={image === 2 ? "slider-image selected-image" : "slider-image"} src={require('./Rokitshop/index.png')}  height="450px" width="650px" />
+                        <img className={image === 3 ? "slider-image selected-image" : "slider-image"} src={require('./Rokitshop/profile.png')}  height="450px" width="650px" />
                     </div>
                     <div className="button-container">
                         <a href="#slider-image-1" onClick={tab1} className={image === 1 ? 'selected slider-button': 'slider-button'}></a>
