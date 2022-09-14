@@ -6,6 +6,11 @@ export default function TimeSupCard({ image, tab1, tab2, tab3, lightMode }) {
         {url: require('./timeSup/profile.png') , title: 'profile'},
         {url: require('./timeSup/chat.png') , title: 'chat'}
     ]
+    const containerStyles = {
+        width: '500px',
+        height: '360px',
+        margin: '0 auto',
+    }
     return (
         <div className={lightMode ? 'timeSup-wrapper light-project' : 'timeSup-wrapper'}> 
             <h2>TimeSup</h2>
@@ -14,7 +19,9 @@ export default function TimeSupCard({ image, tab1, tab2, tab3, lightMode }) {
                 <a className={lightMode ? "light-a" : "dark-a"} target="_blank" href="https://timesupdateapp.herokuapp.com/">Live App</a>
                 <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/liloby/TimeSup">Github</a>
             </div>
+            <div style={containerStyles}>
             <ImageSlider slides={slides} />
+            </div>
         </div>
     )
 }
