@@ -3,6 +3,7 @@ export default function TimeSupCard({ image, tab1, tab2, tab3, lightMode }) {
         <div className={lightMode ? 'timeSup-wrapper light-project' : 'timeSup-wrapper'}> 
                 <h2>TimeSup</h2>
                 <h4>Dating App that features an expiration date on each match</h4>
+                <p>No Account? Email: Test1@gmail.com Password: test123 </p>
                 <div className='project-links'>
                     <a className={lightMode ? "light-a" : "dark-a"} target="_blank" href="https://timesupdateapp.herokuapp.com/">Live App</a>
                     <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/liloby/TimeSup">Github</a>
