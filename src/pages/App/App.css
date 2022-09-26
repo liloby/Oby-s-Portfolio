@@ -1668,3 +1668,51 @@ main h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media only screen and (max-height: 700px) {
+  .Projects-wrapper {
+    margin-top: 8rem;
+  }
+  .project-btn {
+    font-size: .6rem;
+  }
+  .slider-button {
+    height: 15px;
+    width: 15px;
+  }
+  .slider-image {
+    height: 200px;
+    width: 280px;
+  }
+  .mobile-image {
+    height: 200px;
+    width: 97px;
+  }
+  .image-container {
+    height: 200px;
+    width: 840px;
+    left: 0px;
+  }
+  .slide-container {
+    height: 230px;
+    width: 280px
+  }
+  .button-container {
+    top: 8px;
+  }
+  #slider-image-1:target ~ .image-container {
+    left: 0px;
+  }
+  
+  #slider-image-2:target ~ .image-container {
+    left: -280px;
+  }
+  
+  #slider-image-3:target ~ .image-container {
+    left: -560px;
+  }
+  
+  #slider-image-4:target ~ .image-container {
+    left: -468px;
+  }
+}
