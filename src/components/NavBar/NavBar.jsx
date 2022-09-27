@@ -58,7 +58,7 @@ export default function NavBar({
           Full Stack Developer
         </div>
         <div className="resume-wrapper">
-          <a target="_blank" href={require('../../pages/App/oby-resume1.pdf')}>Resume</a>
+          <a target="_blank" href={require('../../pages/App/oby-resume1.pdf')}>Résumé</a>
         </div>
       </div>
       <div className={lightMode ? "lightModeBorder" : "Border-line"}></div>
