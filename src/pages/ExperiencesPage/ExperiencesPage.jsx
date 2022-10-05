@@ -8,7 +8,7 @@ export default function ExperiencesPage({ lightMode }) {
             : "Experience-wrapper"
         }
       >
-        <h1 className="white">Experiences</h1>
+        <h1 className="white">Extracurricular</h1>
         <div className="Yilan-wrapper">
           <div className="Yilan-img"></div>
           <p className="Yilan-info white">

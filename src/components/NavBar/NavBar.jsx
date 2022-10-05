@@ -128,7 +128,7 @@ export default function NavBar({
             }
             to="/experiences"
           >
-            Experiences
+            Extracurricular
           </Link>
         </div>
         <div>
