@@ -58,7 +58,7 @@ export default function NavBar({
           Full Stack Developer
         </div>
         <div className="resume-wrapper">
-          <a target="_blank" href="https://docs.google.com/document/d/1XaJ-p2hrHWA-yPHqVx1zWq2VO7zS2TYmYjXOZzi4Ng0/edit?usp=sharing">Résumé</a>
+          <a target="_blank" href="https://docs.google.com/document/d/1O_G2jAch-5sqaim5r_4XNdDB_O6hp7MmiKmWuSLOU0I/export?format=pdf">Résumé</a>
         </div>
       </div>
       <div className={lightMode ? "lightModeBorder" : "Border-line"}></div>
