@@ -10,6 +10,7 @@ import ExperiencesPage from "../ExperiencesPage/ExperiencesPage";
 import ContactPage from "../ContactPage/ContactPage";
 import NavBar from "../../components/NavBar/NavBar";
 import { useEffect } from "react";
+import Snowfall from "react-snowfall";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -55,6 +56,11 @@ export default function App() {
       {
         <div className={lightMode ? "lightModeMain Main-Container-Wrapper" : "Main-Container-Wrapper"}>
           <div className={showMenu? "menu small-screen" :"menu small-screen close-menu"} onClick={() => setShowMenu(!showMenu)}></div>
+          <Snowfall style={{ position: 'fixed', width: '100vw', height: '100vh'}}
+          snowflakeCount={50}
+          speed={[.5, 1]}
+          wind={[-.5, 2]}
+          />
           <NavBar
             user={user}
             setUser={setUser}
