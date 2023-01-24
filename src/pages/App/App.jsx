@@ -17,6 +17,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [lightMode, setLightMode] = useState(false)
   const [showMenu, setShowMenu] = useState(true)
+  const [snow, setSnow] = useState(true)
 
   function handleHomePage() {
     setCurrentPage(1);
@@ -51,16 +52,25 @@ export default function App() {
     }
   }
 
+  function stopSnow() {
+    if (snow == true) {
+      setSnow(false)
+    } else {
+      setSnow(true)
+    }
+  }
+
   return (
     <main className={lightMode ? "lightModeApp App" : "App"}>
       {
         <div className={lightMode ? "lightModeMain Main-Container-Wrapper" : "Main-Container-Wrapper"}>
           <div className={showMenu? "menu small-screen" :"menu small-screen close-menu"} onClick={() => setShowMenu(!showMenu)}></div>
-          <Snowfall style={{ position: 'fixed', width: '100vw', height: '100vh'}}
+          <Snowfall style={ snow ? { position: 'fixed', width: '100vw', height: '100vh'} : { position: 'fixed', width: '100vw', height: '100vh', visibility: 'hidden'}}
           snowflakeCount={50}
-          speed={[.5, 1]}
-          wind={[-.5, 2]}
+          speed={[.1, .5]}
+          wind={[-.5, .5]}
           />
+          {/* <button className="snow-btn" onClick={stopSnow}>Snow</button> */}
           <NavBar
             user={user}
             setUser={setUser}
@@ -74,12 +84,13 @@ export default function App() {
             handleLightMode={handleLightMode}
             lightMode={lightMode}
             showMenu={showMenu}
+            stopSnow={stopSnow}
           />
           <Routes>
             <Route path="/" element={<HomePage handleAboutPage={handleAboutPage} lightMode={lightMode} />} />
             <Route path="/about" element={<AboutPage lightMode={lightMode} />} />
             <Route path="/portfolio" element={<PortfolioPage lightMode={lightMode} />} />
-            <Route path="/experiences" element={<ExperiencesPage lightMode={lightMode} />} />
+            {/* <Route path="/experiences" element={<ExperiencesPage lightMode={lightMode} />} /> */}
             <Route path="/contact" element={<ContactPage lightMode={lightMode}  />} />
             <Route path="/admin" element={< AuthPage setUser={setUser} user={user} lightMode={lightMode} />} />
           </Routes>

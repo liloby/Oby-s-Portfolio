@@ -114,7 +114,7 @@ export default function NavBar({
             Portfolio
           </Link>
         </div>
-        <div>
+        {/* <div>
           <Link
             onClick={handleExperiencesPage}
             className={
@@ -130,7 +130,7 @@ export default function NavBar({
           >
             Extracurricular
           </Link>
-        </div>
+        </div> */}
         <div>
           <Link
             onClick={handleContactPage}
