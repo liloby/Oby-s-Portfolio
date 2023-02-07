@@ -3,6 +3,7 @@ export default function Rokitshop({ image, tab1, tab2, tab3, lightMode}) {
         <div className={lightMode ? 'rokitshop-wrapper light-project' : 'rokitshop-wrapper'}> 
                 <h2>Rokitshop</h2>
                 <h4>Browse, Bid, and Sell any items at ease</h4>
+                <h5>Technology: Python, Django, AWS</h5>
                 <div className='project-links'>
                     {/* <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://rokitshop.herokuapp.com/">Live App</a> */}
                     <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/liloby/rokitshop">Github</a>

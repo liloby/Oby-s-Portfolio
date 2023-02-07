@@ -3,6 +3,7 @@ export default function Blackjack({ image, tab1, tab2, tab3, lightMode}) {
         <div className={lightMode ? 'blackjack-wrapper light-project' : 'blackjack-wrapper'}> 
                 <h2>Blackjack</h2>
                 <h4>A casino card game between a player competing against the dealer</h4>
+                <h5>Technology: Html, CSS, JavaScript</h5>
                 <div className='project-links'>
                     <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://liloby.github.io/blackjack-project1/">Live App</a>
                     <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/liloby/blackjack-project1">Github</a>
