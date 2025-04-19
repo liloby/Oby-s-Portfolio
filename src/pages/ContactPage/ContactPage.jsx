@@ -44,11 +44,11 @@ export default function ContactPage({lightMode}) {
         }
         <form className={lightMode ? "lightForm" : "darkForm"} onSubmit={handleAddMessage}>
           <label className="white">Name:</label>
-          <input onChange={handleChange} name="name" value={formData.name} type="text" required />
+          <input onChange={handleChange} name="name" class="input" value={formData.name} type="text" required />
           <label className="white">Email:</label>
-          <input onChange={handleChange} name="email" value={formData.email} type="email" required />
+          <input onChange={handleChange} name="email" class="input" value={formData.email} type="email" required />
           <label className="white">Phone <em>(Optional)</em> :</label>
-          <input onChange={handleChange} name="phone" value={formData.phone} type="tel" id="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"/>
+          <input onChange={handleChange} name="phone" class="input" value={formData.phone} type="tel" id="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"/>
           <label className="white">Message:</label>
           <textarea onChange={handleChange} name="message" value={formData.message} id="" cols="30" rows="10" required></textarea>
           <button className={lightMode ? "lightBtn" : "darkBtn"} type="submit">Send</button>

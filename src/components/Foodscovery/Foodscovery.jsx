@@ -5,7 +5,7 @@ export default function Foodscovery({ image, tab1, tab2, tab3, lightMode}) {
                 <h4>Social app that allow users to share and discover their favorite restaurants</h4>
                 <h5>Technology: MongoDB, JavaScript, Oauth</h5>
                 <div className='project-links'>
-                    <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://foodscovery.onrender.com">Live App</a>
+                    {/* <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://foodscovery.onrender.com">Live App</a> */}
                     <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/liloby/restaurants-app">Github</a>
                 </div>
                 <div className="slide-container">

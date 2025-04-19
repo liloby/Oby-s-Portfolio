@@ -5,7 +5,7 @@ export default function TimeSupCard({ image, tab1, tab2, tab3, lightMode }) {
                 <h4>Dating App that features an expiration date on each match</h4>
                 <h5>Technology: MERN Stack, JavaScript Web Tokens, Heroku</h5>
                 <div className='project-links'>
-                    <a className={lightMode ? "light-a" : "dark-a"} target="_blank" href="https://timesupdateapp.herokuapp.com/">Live App</a>
+                    {/* <a className={lightMode ? "light-a" : "dark-a"} target="_blank" href="https://timesupdateapp.herokuapp.com/">Live App</a> */}
                     <a className={lightMode ? "light-a" : "dark-a"}  target="_blank" href="https://github.com/liloby/TimeSup">Github</a>
                 </div>
                 <div className="slide-container">

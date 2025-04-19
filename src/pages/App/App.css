@@ -77,7 +77,7 @@ body {
 }
 
 .lightModeNav {
-  background: rgba(141, 186, 222, 0.4);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 2rem;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -143,6 +143,7 @@ nav::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  padding: .5rem;
 }
 
 
@@ -773,11 +774,11 @@ main h1 {
 
 .project-btn:hover {
   opacity: 100%;
-  box-shadow: 0px 0px 10px 5px #2992bd;
+  box-shadow: 0px 0px 6px 3px #ffffff;
 }
 
 .selected-project {
-  box-shadow: 0px 0px 10px 5px #2992bd;
+  box-shadow: 0px 0px 6px 3px #2992bd;
 }
 
 #slider-image-1:target ~ .image-container {
@@ -854,6 +855,11 @@ main h1 {
 .project-btn-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.input {
+  padding: .5rem;
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 1500px) {
