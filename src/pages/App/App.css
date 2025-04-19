@@ -407,7 +407,7 @@ a {
 
 .lightPopup {
   color: black;
-  background: rgba(141, 186, 222, 0.9);
+  background: rgba(162, 167, 172, 0.9);
 }
 
 @keyframes fade {
@@ -1001,7 +1001,7 @@ main h1 {
     border-radius: 2rem;
   }
   .lightModeNav {
-    background: rgba(141, 186, 222, 0.9);
+    background: rgba(162, 167, 172, 0.9);
     border-radius: 0 0 2rem 2rem;
   }
   .role {
