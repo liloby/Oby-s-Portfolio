@@ -1,5 +1,7 @@
 import * as messageAPI from "../../utilities/message-api"
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
+
 
 const initState = {
     name: '',
@@ -12,15 +14,31 @@ export default function ContactPage({lightMode}) {
     const [formData, setFormData] = useState(initState)
     const [popup, setPopup] = useState(false)
 
+      const form = useRef();
+    
+      const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+          .then((result) => {
+              console.log(result.text);
+              setPopup(true)
+              setFormData(initState)
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
 
-   async function handleAddMessage(evt) {
-    evt.preventDefault()
-    const updatedMessage = {...formData}
-    const message = await messageAPI.newMessage(updatedMessage)
-    console.log(message, "MESSAGE AFTER CONTROLLER")
-    setFormData(initState)
-    setPopup(true)
-   }
+
+
+  //  async function handleAddMessage(evt) {
+  //   evt.preventDefault()
+  //   const updatedMessage = {...formData}
+  //   const message = await messageAPI.newMessage(updatedMessage)
+  //   console.log(message, "MESSAGE AFTER CONTROLLER")
+  //   setFormData(initState)
+  //   setPopup(true)
+  //  }
 
    function handleChange(evt) {
     setFormData({...formData, [evt.target.name]: evt.target.value})
@@ -42,9 +60,9 @@ export default function ContactPage({lightMode}) {
         :
         ""
         }
-        <form className={lightMode ? "lightForm" : "darkForm"} onSubmit={handleAddMessage}>
+        <form ref={form} className={lightMode ? "lightForm" : "darkForm"} onSubmit={sendEmail}>
           <label className="white">Name:</label>
-          <input onChange={handleChange} name="name" class="input" value={formData.name} type="text" required />
+          <input onChange={handleChange} name="name" class="input" value={formData.name} type="text" autoFocus required />
           <label className="white">Email:</label>
           <input onChange={handleChange} name="email" class="input" value={formData.email} type="email" required />
           <label className="white">Phone <em>(Optional)</em> :</label>
