@@ -924,7 +924,7 @@ main h1 {
   }
 
   .hideNav {
-    animation: collapse 1s;
+    /* animation: collapse 1s; */
     height: 0;
   }
 
@@ -1261,13 +1261,13 @@ main h1 {
   }
   .showNav {
     visibility: visible;
-    animation: expand 1s;
-    -webkit-animation: expand 1s;
+    /* animation: expand 1s;
+    -webkit-animation: expand 1s; */
   }
 
   .hideNav {
-    animation: 1s collapse;
-    -webkit-animation: 1s collapse;
+    /* animation: 1s collapse;
+    -webkit-animation: 1s collapse; */
     height: 0;
   }
 

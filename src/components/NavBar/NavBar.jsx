@@ -10,7 +10,6 @@ export default function NavBar({
   handleHomePage,
   handleAboutPage,
   handlePortfolioPage,
-  handleExperiencesPage,
   handleContactPage,
   handleLightMode,
   lightMode,
@@ -32,14 +31,13 @@ export default function NavBar({
     [user]
   );
 
-  console.log(messages, "UNREAD MESSAGES");
-
   function handleLogOut() {
     userService.logOut();
     setUser(null);
   }
   return (
-    <nav className={lightMode && showMenu ? "lightModeNav hideNav"
+    <nav className={
+                    lightMode && showMenu ? "lightModeNav hideNav"
                     : showMenu ? "hideNav" 
                     : lightMode && !showMenu ? "lightModeNav showNav"
                     : !showMenu ? "showNav"
